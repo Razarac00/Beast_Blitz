@@ -1,6 +1,6 @@
-# revature_p2
+# Beast Blitz
 
-Raise your pets with care. Rise to glory in battle. Revautre_p2 brings combat and care together in this new pet simulator right in your browser. Feed, dress, and groom your pet for a day at home or go out and grind enemies for coin. The choice is yours.
+Raise your pets with care. Rise to glory in battle. Beast Blitz brings combat and care together in this new pet simulator right in your browser. Feed, dress, and groom your pet for a day at home or go out and grind enemies for coin. The choice is yours.
 
 ## How to Play
 
