@@ -11,8 +11,10 @@ namespace Beast_Blitz.Testing
         //Given
         var hat = new Hat();
         //When
-        
+        int expected = 50;
+        var actual = hat.SellingPrice();
         //Then
+        Assert.True(expected == actual);
         }
     }
 }
