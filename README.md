@@ -8,9 +8,7 @@ TO DO
 
 ## Authors
 
-Beth Billings
-Celestino Jones
-John Orji
+Beth Billings, Celestino Jones, John Orji
 
 Created for Revature C# Batch
 
