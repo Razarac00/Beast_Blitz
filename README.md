@@ -10,7 +10,7 @@ TO DO
 
 Beth Billings, Celestino Jones, John Orji
 
-Created for Revature C# Batch
+Created for Revature .NET Batch 1908-Aug05
 
 Special thanks to our trainer fred belotte
 
