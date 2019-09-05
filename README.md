@@ -1,6 +1,6 @@
 # Beast Blitz
 
-Raise your pets with care. Rise to glory in battle. Beast Blitz brings combat and care together in this new pet simulator right in your browser. Feed, dress, and groom your pet for a day at home or go out and grind enemies for coin. The choice is yours.
+Raise your pets with care. Rise to glory in battle. Beast Blitz brings combat and care together in this new pet simulator right in your browser. Feed, dress, and groom your pet for a day at home, or adventure out and battle enemies for rewards and glory. The choice is yours.
 
 ## How to Play
 
