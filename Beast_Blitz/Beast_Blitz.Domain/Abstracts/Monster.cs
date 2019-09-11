@@ -1,20 +1,20 @@
+using Beast_Blitz.Domain.Models;
+
 namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Monster
     {
         // Properties
-        Species Species { get; set; }
-        Element Element { get; set; }
-        BattleStats BattleStats { get; set; }
-        string Color { get; set; }
+        public Species Species { get; set; }
+        public BattleStats BattleStats { get; set; }
+        public string Color { get; set; }
 
         // Constructors 
-        public Monster(Species s, Element e, string c) 
+        public Monster(Species species, string color) 
         {
-          Species = s; 
-          Element = e; 
-          Color = c; 
-          BattleStats = s.BaseStats;
+          Species = species; 
+          Color = color; 
+          BattleStats = species.BaseStats;
         }
     }
 }
