@@ -2,17 +2,15 @@ using System;
 
 namespace Beast_Blitz.Domain.Abstracts
 {
-    public abstract class Accessory
+    public abstract class Accessory : Item
     {
-      private int _basePrice = 100;  
-      public string Name { get; set; } 
-      public int Price { get => _basePrice; set => _basePrice = value; }
-      public string Color { get; set; }
+        // Properties 
+        string Image { get; set; }
 
-      public virtual int SellingPrice()
-      {
-          decimal result = Price / 2;
-          return (int) Math.Ceiling(result);
-      }
+        // Constructor
+        public Accessory(string name, int basecost, string image) : base(name, basecost)
+        {
+          Image = image;
+        }
     }
 }
