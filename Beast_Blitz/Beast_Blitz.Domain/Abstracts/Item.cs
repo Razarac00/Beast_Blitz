@@ -13,10 +13,10 @@ namespace Beast_Blitz.Domain.Abstracts
         double SELL_PENALTY = .25; 
 
         //Constructor
-        public Item(string n, int bc)
+        public Item(string name, int basecost)
         {
-          Name = n; 
-          BuyCost = bc;
+          Name = name; 
+          BuyCost = basecost;
           SellCost = Convert.ToInt32(BuyCost * SELL_PENALTY);
         }
     }
