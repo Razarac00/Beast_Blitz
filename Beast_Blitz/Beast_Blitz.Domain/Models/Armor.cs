@@ -4,6 +4,13 @@ namespace Beast_Blitz.Domain.Models
 {
     public class Armor : Accessory
     {
-      public int DefenseBoon { get; set; }   
+        // Properties
+        int Defense { get; set; }
+
+        // Constructor
+        public Armor( string name, int basecost, string image, int defense) : base(name, basecost, image)
+        {
+          Defense = defense;
+        }
     }
 }
