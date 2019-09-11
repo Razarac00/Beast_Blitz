@@ -1,3 +1,5 @@
+using System;
+
 namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Accessory : Item
