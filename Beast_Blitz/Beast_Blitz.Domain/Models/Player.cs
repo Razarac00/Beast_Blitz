@@ -6,9 +6,9 @@ namespace Beast_Blitz.Domain.Models
   public class Player : User
   {
     // Properties 
-    List<Pet> Pets { get; set; }
-    List<Item> Inventory { get; set; }
-    int Coins { get; set; }
+    public List<Pet> Pets { get; set; }
+    public List<Item> Inventory { get; set; }
+    public int Coins { get; set; }
 
     // Constants
     int MAX_PETS = 3; 
@@ -22,11 +22,11 @@ namespace Beast_Blitz.Domain.Models
     }
 
     // Methods
-    public void AddNewPet(Species species, Element element, string color, string name)
+    public void AddNewPet(Species species, string color, string name)
     {
       if (Pets.Count < MAX_PETS)
       {
-        Pets.Add(new Pet(species, element, color, name));
+        Pets.Add(new Pet(species, color, name));
       }
     }
 

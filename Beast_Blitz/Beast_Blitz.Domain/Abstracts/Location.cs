@@ -3,12 +3,12 @@ namespace Beast_Blitz.Domain.Abstracts
     public abstract class Location
     {
         // Properties
-        string Name { get; set; }
+        public string Name { get; set; }
 
         // Constructor
-        public Location(string n)
+        public Location(string name)
         {
-          Name = n;
+          Name = name;
         }
     }
 }

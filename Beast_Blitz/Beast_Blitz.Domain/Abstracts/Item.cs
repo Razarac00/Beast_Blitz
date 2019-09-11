@@ -5,9 +5,9 @@ namespace Beast_Blitz.Domain.Abstracts
     public abstract class Item
     {
         // Properties
-        string Name { get; set; }
-        int BuyCost { get; set; }
-        int SellCost { get; set; }
+        public string Name { get; set; }
+        public int BuyCost { get; set; }
+        public int SellCost { get; set; }
 
         // Constants
         double SELL_PENALTY = .25; 
