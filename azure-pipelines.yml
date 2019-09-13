@@ -37,10 +37,10 @@ stages:
               version: '2.2.401'
           - script: |
               dotnet tool install --global dotnet-sonarscanner
-              dotnet sonarscanner begin /k:"{name}" /o:"{organization}" /d:sonar.login="{login token}" /d:sonar.host.url="https://sonarcloud.io/"
+              dotnet sonarscanner begin /k:"Razarac00_Beast_Blitz" /o:"razarac00" /d:sonar.login="56f012d38937c0367b5cfce161742ee5b394d813" /d:sonar.host.url="https://sonarcloud.io/"
               dotnet build
               dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=\"cobertura,opencover\" /p:Exclude=[xunit*]*
-              dotnet sonarscanner end /d:sonar.login="{login token}"
+              dotnet sonarscanner end /d:sonar.login="56f012d38937c0367b5cfce161742ee5b394d813"
           - task: PublishTestResults@2
             displayName: 'publish result::unit-test'
             inputs:
@@ -104,4 +104,4 @@ trigger:
       - master
 
 variables:
-  sonar: '{login token}'
+  sonar: '56f012d38937c0367b5cfce161742ee5b394d813'
