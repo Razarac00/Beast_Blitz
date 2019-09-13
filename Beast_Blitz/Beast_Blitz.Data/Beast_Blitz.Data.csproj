@@ -10,4 +10,8 @@
     <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.2.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Beast_Blitz.Domain\Beast_Blitz.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
