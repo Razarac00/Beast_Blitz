@@ -1,10 +1,16 @@
+using Beast_Blitz.Domain.Abstracts;
+
 namespace Beast_Blitz.Domain.Models
 {
-  public class Food
-  {
-    public string Name { get; set; } 
-    public int HealthBoon { get; set; }
-    public int FullnessBoon { get; set; }
-    public string Sprite { get; set; }
-  }
+    public class Food : Item
+    {
+        // Properties
+        public int FullnessAmt { get; set; }
+
+        // Constructor
+        public Food(string name, int basecost, int fullnessamt) : base(name, basecost)
+        {
+          FullnessAmt = fullnessamt;
+        }
+    }
 }

@@ -1,32 +1,21 @@
 using System;
+using Beast_Blitz.Domain.Abstracts;
 
 namespace Beast_Blitz.Domain.Models
 {
-    public class Pet
+    public class Pet : Monster
     {
-      public string Name { get; set; }
-      public int Age { get; set; }
-      public DateTime CreationDate { get; set; }
-      public string Color { get; set; }
-
-      public BattleStats BattleStats { get; set; }
-      public CareStats CareStats { get; set; }
-
-      public Species Species { get; set; }
-
-      public Hat Hat { get; set; }
-      public Armor Armor { get; set; }
-
-      public Pet(string NewName, string NewColor, Species NewSpecies)
-      {
-        Name = NewName;
-        Age = 0;
-        CreationDate = DateTime.Now; 
-        Color = NewColor;
-        Species = NewSpecies;
-        BattleStats = Species.BaseBattleStats;
-        CareStats = Species.BaseCareStats;
-      }
-
+        // Properties
+        public string Name { get; set; }
+        public DateTime Birthday { get; }
+        public CareStats CareStats { get; set; }
+        
+        // Constructor
+        public Pet(Species species, string color, string name) : base(species, color)
+        {
+          Name = name;
+          Birthday = DateTime.Now.Date;
+          CareStats = new CareStats();
+        }
     }
 }

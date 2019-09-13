@@ -1,8 +1,8 @@
 namespace Beast_Blitz.Domain.Models
 {
-    public class Element 
+    public class Element
     {
-      public string Name { get; set; }
-      
+        // Properties
+        public string Name { get; set; }
     }
 }

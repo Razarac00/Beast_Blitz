@@ -1,12 +1,16 @@
+using Beast_Blitz.Domain.Abstracts;
+
 namespace Beast_Blitz.Domain.Models
 {
-    public class Enemy : Pet
+    public class Enemy : Monster
     {
-      public decimal Multiplier { get; set; }
+        // Properties
+        public int CoinReward { get; set; }
 
-      public Enemy(string NewName, string NewColor, Species NewSpecies) : base(NewName, NewColor, NewSpecies)
-      {
-
-      }
+        // Constructor
+        public Enemy(Species species, string color, int coinreward) : base(species, color)
+        {
+          CoinReward = coinreward; 
+        }
     }
 }
