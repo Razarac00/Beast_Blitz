@@ -36,6 +36,12 @@ namespace Beast_Blitz.Data
             builder.Entity<Player>().HasMany(p => p.Inventory);
 
             builder.Entity<Pet>().HasOne(p => p.CareStats);
+            builder.Entity<Pet>().HasOne(p => p.BattleStats);
+
+            builder.Entity<Enemy>().HasOne(e => e.BattleStats);
+
+            builder.Entity<Boss>().HasOne(b => b.BattleStats);
+            // builder.Entity<Boss>().HasOne(b => b.Reward);
         }
     }
 }
