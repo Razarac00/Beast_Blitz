@@ -6,15 +6,25 @@ namespace Beast_Blitz.Testing
     public class HatTesting
     {
         [Fact]
-        public void CanBeConstructed()
+        public void CanBeConstructedAndSold()
         {
         //Given
-        var hat = new Hat();
+        // var hat = new Hat();
+        // //When
+        // int expected = 50;
+        // var actual = hat.SellingPrice();
+        // //Then
+        // Assert.True(expected == actual);
+        }
+
+        [Fact]
+        public void TestName()
+        {
+        //Given
+        
         //When
-        int expected = 50;
-        var actual = hat.SellingPrice();
+        
         //Then
-        Assert.True(expected == actual);
         }
     }
 }
