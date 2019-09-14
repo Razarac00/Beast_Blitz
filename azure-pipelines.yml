@@ -70,9 +70,9 @@ stages:
               containerRegistry: 'docker'
             displayName: 'docker login'
           - script: |
-              docker image build --file Dockerfile --tag {tag} .
-              docker image tag {tag} {remote container}
-              docker push {remote container}
+              docker image build --file Dockerfile --tag beastblitz .
+              docker image tag beastblitz orjijohn/beastblitz
+              docker push orjijohn/beastblitz
           - task: Docker@2
             inputs:
               command: 'logout'
@@ -96,7 +96,7 @@ stages:
             inputs:
               azureSubscription: '{azure devops token}'
               appName: '{name}'
-              containers: '{remote container}'
+              containers: 'orjijohn/beastblitz'
 
 trigger:
   branches:
