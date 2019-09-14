@@ -90,13 +90,17 @@ header {
   border-bottom: 1px solid #470e3f7e;
   margin-bottom:15px;
   background-color:#AF1b3F;
-  height:160px;
+  height:175px;
   border-radius: 0px 0px 4px 4px;
 }
 
-header a {
+#title {
   float:left;
   color:black;
+}
+
+#profile {
+  min-height:500px;
 }
 
 header a:hover {
