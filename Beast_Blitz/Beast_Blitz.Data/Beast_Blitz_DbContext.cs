@@ -1,4 +1,3 @@
-using Beast_Blitz.Domain.Abstracts;
 using Beast_Blitz.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,7 +40,7 @@ namespace Beast_Blitz.Data
             builder.Entity<Enemy>().HasOne(e => e.BattleStats);
 
             builder.Entity<Boss>().HasOne(b => b.BattleStats);
-            // builder.Entity<Boss>().HasOne(b => b.Reward);
+            builder.Entity<Boss>().HasOne(b => b.Reward);
         }
     }
 }
