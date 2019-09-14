@@ -94,8 +94,8 @@ stages:
         steps:
           - task: AzureWebAppContainer@1
             inputs:
-              azureSubscription: '{azure devops token}'
-              appName: '{name}'
+              azureSubscription: 'Free Trial(c627afcc-a09f-48f7-b81a-fe0ebc8244c4)'
+              appName: 'beastblitz'
               containers: 'orjijohn/beastblitz'
 
 trigger:
