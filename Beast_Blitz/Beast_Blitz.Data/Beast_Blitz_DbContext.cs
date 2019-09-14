@@ -25,7 +25,7 @@ namespace Beast_Blitz.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("");
+            builder.UseSqlServer("server=localhost;initial catalog=Beast_Blitz_Db;user id=sa;password=Password12345");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -42,7 +42,7 @@ namespace Beast_Blitz.Data
             builder.Entity<Boss>().HasOne(b => b.BattleStats);
             builder.Entity<Boss>().HasOne(b => b.Reward);
 
-            builder.Entity<Shop>().HasMany(s => s.Inventory);
+            // builder.Entity<Shop>().HasMany(s => s.Inventory);
 
             // builder.Entity<Battlefield>().HasMany(b => b.Enemies);
             // builder.Entity<Battlefield>().HasOne(b => b.Boss);
