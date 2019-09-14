@@ -1,16 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "1ccc9d576ccc4c6dbe6a1a5f21625b0ebde54786"
+    "signature": "93b5d6fa096726aa90619b72e309439934091475"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "Beast_Blitz.Testing/1.0.0": {
         "dependencies": {
-          "Beast_Blitz.Domain": "1.0.0",
           "Microsoft.NET.Test.Sdk": "15.9.0",
-          "coverlet.msbuild": "2.6.3",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -18,7 +16,6 @@
           "Beast_Blitz.Testing.dll": {}
         }
       },
-      "coverlet.msbuild/2.6.3": {},
       "Microsoft.CodeCoverage/15.9.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -1055,11 +1052,6 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "15.9.0"
         }
-      },
-      "Beast_Blitz.Domain/1.0.0": {
-        "runtime": {
-          "Beast_Blitz.Domain.dll": {}
-        }
       }
     }
   },
@@ -1068,13 +1060,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "coverlet.msbuild/2.6.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TI1IPEjJ1+sh+1u3aQUvqwXmjjRwykoEi374U68BPk6xp1gka545YaOAjI6ggy4ZAJr/sB9ipGE/nbBNwg5o8A==",
-      "path": "coverlet.msbuild/2.6.3",
-      "hashPath": "coverlet.msbuild.2.6.3.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/15.9.0": {
       "type": "package",
@@ -1607,11 +1592,6 @@
       "sha512": "sha512-3eq5cGXbEJkqW9nwLuXwtxy9B5gMA8i7HW4rN63AhAvy5UvEcQbZnve23wx/oPrkyg/4CbfNhxkBezS0b1oUdQ==",
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
-    },
-    "Beast_Blitz.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
