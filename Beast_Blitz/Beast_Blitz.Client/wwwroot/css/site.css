@@ -71,6 +71,7 @@ body {
 
 .nav-main li {
   transition: 0.2s;
+  margin: 3px 0px;
 }
 
 .nav-main li:hover{

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Beast_Blitz.Domain.Models
 {
-  class User
+  public class User
   {
       public string Username { get; set; }
       public string Email { get; set; }

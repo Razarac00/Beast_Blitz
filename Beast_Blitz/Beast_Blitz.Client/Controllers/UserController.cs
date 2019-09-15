@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Beast_Blitz.Client.Models;
+using Beast_Blitz.Domain.Models;
 using Microsoft.AspNetCore.Http;
 
 namespace Beast_Blitz.Client.Controllers
@@ -23,6 +23,25 @@ namespace Beast_Blitz.Client.Controllers
 
         public IActionResult Inventory()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(User user)
+        {
+            if(ModelState.IsValid)
+            {
+                //add to db
+                HttpContext.Session.SetInt32("UserId", 1);
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
