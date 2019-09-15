@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Models
         {
           Happiness = happiness;
         }
+
+        public Hat() : base("defaultHat", 10, "defaultHat.jpg")
+        {
+          Happiness = 4;
+        }
     }
 }
