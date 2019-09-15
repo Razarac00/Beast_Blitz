@@ -20,7 +20,7 @@ namespace Beast_Blitz.Client.Controllers
             return View();
         }
 
-        public IActionResult Help()
+        public IActionResult Tutorial()
         {
             return View();
         }

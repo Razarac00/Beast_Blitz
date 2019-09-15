@@ -79,9 +79,22 @@ body {
   border-radius: 3px;
 }
 
+.nav-main h5 {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.nav-main i {
+  border: 1px solid #470e3f;
+  padding:2px;
+}
+
+.nav-main ul {
+  list-style: none;
+  padding:0;
+}
+
 .footer {
   text-align:center;
-  width: inherit;
   white-space: nowrap;
   background-color: #EDE9E6;
   /* Set the fixed height of the footer here */
@@ -139,10 +152,14 @@ header a:hover {
   text-decoration: none;
 }
 
-.nav-link {
+.nav-main {
   color:black;
   font-size:18px;
   font-family: 'Fira Sans', sans-serif;
+}
+
+.nav-link {
+  color:black;
 }
 
 .nav-link:hover {
