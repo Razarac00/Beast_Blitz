@@ -7,10 +7,18 @@ namespace Beast_Blitz.Domain.Models
         // Properties
         public Item Reward { get; set; }
 
-        // Constructor
+        // Constructors
         public Boss(Species species, string color, int coinreward, Item item) : base(species, color, coinreward)
         {
           Reward = item;
+        }
+
+        public Boss()
+        {
+          Species = new Species();
+          Color = "defaultColor";
+          CoinReward = 10;
+          Reward = new Armor(); 
         }
     }
 }

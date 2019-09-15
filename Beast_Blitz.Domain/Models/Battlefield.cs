@@ -9,11 +9,20 @@ namespace Beast_Blitz.Domain.Models
         public List<Enemy> Enemies { get; set; }
         public Boss Boss { get; set; }
 
-        // Constructor
+        // Constructors
         public Battlefield(string name, List<Enemy> enemies, Boss boss) : base(name)
         {
           Enemies = enemies;
           Boss = boss; 
+        }
+
+        public Battlefield() : base("defaultBattlefield")
+        {
+          Species species = new Species();
+          Enemy enemy = new Enemy();
+          Boss = new Boss();
+          Enemies = new List<Enemy>();
+          Enemies.Add(enemy);
         }
 
         // Methods 

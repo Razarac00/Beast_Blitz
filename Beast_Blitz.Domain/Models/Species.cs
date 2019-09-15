@@ -8,13 +8,21 @@ namespace Beast_Blitz.Domain.Models
         public BattleStats BaseStats { get; set; }
         public string Image { get; set; }
 
-        // Constructor
+        // Constructors
         public Species(string name, Element element, BattleStats basestats, string image)
         {
           Name = name;
           Element = element;
           BaseStats = basestats;
           Image = image;
+        }
+
+        public Species()
+        {
+          Name = "defaultSpecies";
+          Element = new Element();
+          BaseStats = new BattleStats();
+          Image = "defaultSpecies.jpg";
         }
     }
 }
