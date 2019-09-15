@@ -94,8 +94,11 @@ stages:
         pool:
           vmImage: 'ubuntu-16.04'
         steps:
-          - script: |
-              echo 'working on it'
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: 'Azure12MonthFreeSub(c627afcc-a09f-48f7-b81a-fe0ebc8244c4)'
+              appName: 'BeastBlitz2019'
+              containers: 'orjijohn/beastblitz'
 
 
 trigger:
