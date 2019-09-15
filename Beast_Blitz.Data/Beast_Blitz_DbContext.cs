@@ -44,8 +44,8 @@ namespace Beast_Blitz.Data
 
             // builder.Entity<Shop>().HasMany(s => s.Inventory);
 
-            // builder.Entity<Battlefield>().HasMany(b => b.Enemies);
-            // builder.Entity<Battlefield>().HasOne(b => b.Boss);
+            builder.Entity<Battlefield>().HasMany(b => b.Enemies);
+            builder.Entity<Battlefield>().HasOne(b => b.Boss);
 
             builder.Entity<Species>().HasOne(s => s.BaseStats);
         }
