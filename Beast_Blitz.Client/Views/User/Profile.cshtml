@@ -8,16 +8,16 @@
     <div class="col-lg-4">
         <div class="row mx-2 my-3">
             <div class="col-12 m-2 border shadow">
-                <img src="/img/slime.gif" alt="Player beast" class="img-fluid pt-2">
+                <img id="beastsprite" src="/img/slime.gif" alt="Player beast" class="img-fluid pt-2">
                 
                 <table class="table">
                     <tr>
                         <td>Name</td>
-                        <td>_PetName</td>
+                        <td id="name">_PetName</td>
                     </tr>
                     <tr>
                         <td>Birthday</td>
-                        <td>January 1, 2019</td>
+                        <td id="bday">January 1, 2019</td>
                     </tr>
                 </table>
 
@@ -33,14 +33,22 @@
                     </div>
                 </div>
                 <div class="row my-1" id="statnum">
-                    <div class="col-4">
+                    <div class="col-4" id="happynum">
                         100/100
                     </div>
-                    <div class="col-4">
+                    <div class="col-4" id="foodnum">
                         100/100
                     </div>
-                    <div class="col-4">
+                    <div class="col-4" id="cleannum">
                         100/100
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6">
+                        <i class="fas fa-arrow-left arrow"></i>
+                    </div>
+                    <div class="col-6">
+                        <i class="fas fa-arrow-right arrow"></i>
                     </div>
                 </div>
             </div>
