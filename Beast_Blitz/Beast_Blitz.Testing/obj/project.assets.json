@@ -1673,6 +1673,16 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Beast_Blitz.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Beast_Blitz.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beast_Blitz.Domain.dll": {}
+        }
       }
     }
   },
@@ -5841,10 +5851,16 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Beast_Blitz.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Beast_Blitz.Domain/Beast_Blitz.Domain.csproj",
+      "msbuildProject": "../Beast_Blitz.Domain/Beast_Blitz.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Beast_Blitz.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "xunit >= 2.4.0",
@@ -5880,7 +5896,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\revature\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Domain\\Beast_Blitz.Domain.csproj": {
+              "projectPath": "C:\\revature\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Domain\\Beast_Blitz.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

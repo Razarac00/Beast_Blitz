@@ -11,3 +11,7 @@ C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\
 C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\Beast_Blitz.Testing.AssemblyInfo.cs
 C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\Beast_Blitz.Testing.dll
 C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\Beast_Blitz.Testing.pdb
+C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\bin\Debug\netcoreapp2.2\Beast_Blitz.Domain.dll
+C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\bin\Debug\netcoreapp2.2\Beast_Blitz.Domain.pdb
+C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\Beast_Blitz.Testing.csprojAssemblyReference.cache
+C:\revature\Beast_Blitz\Beast_Blitz\Beast_Blitz.Testing\obj\Debug\netcoreapp2.2\Beast_Blitz.Testing.csproj.CopyComplete
