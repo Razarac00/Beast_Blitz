@@ -17,5 +17,12 @@ namespace Beast_Blitz.Domain.Models
           Birthday = DateTime.Now.Date;
           CareStats = new CareStats();
         }
+
+        public Pet()
+        {
+          Name = "defaultPet";
+          Birthday = DateTime.Now.Date;
+          CareStats = new CareStats();
+        }
     }
 }

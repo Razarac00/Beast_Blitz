@@ -16,5 +16,12 @@ namespace Beast_Blitz.Domain.Abstracts
           Color = color; 
           BattleStats = species.BaseStats;
         }
+
+        public Monster()
+        {
+          Species = new Species();
+          BattleStats = new BattleStats();
+          Color = "defaultColor";
+        }
     }
 }

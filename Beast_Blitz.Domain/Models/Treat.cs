@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Models
         {
           HappinessAmt = happinessamt;
         }
+
+        public Treat()
+        {
+          HappinessAmt = 10;
+        }
     }
 }

@@ -19,6 +19,11 @@ namespace Beast_Blitz.Domain.Models
           Inventory = inventory;
         }
 
+        public Shop()
+        {
+          Inventory = new List<Item>();
+        }
+
         // Methods
         
         // Return true if buy was successful

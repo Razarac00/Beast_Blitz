@@ -16,7 +16,7 @@ namespace Beast_Blitz.Domain.Models
           Boss = boss; 
         }
 
-        public Battlefield() : base("defaultBattlefield")
+        public Battlefield()
         {
           Species species = new Species();
           Enemy enemy = new Enemy();
