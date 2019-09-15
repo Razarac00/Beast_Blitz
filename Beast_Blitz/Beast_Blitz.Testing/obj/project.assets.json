@@ -5852,23 +5852,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eliza\\.nuget\\packages\\": {},
+    "C:\\Users\\jiyko\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\revature\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\Beast_Blitz.Testing.csproj",
+      "projectUniqueName": "d:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\Beast_Blitz.Testing.csproj",
       "projectName": "Beast_Blitz.Testing",
-      "projectPath": "C:\\revature\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\Beast_Blitz.Testing.csproj",
-      "packagesPath": "C:\\Users\\eliza\\.nuget\\packages\\",
-      "outputPath": "C:\\revature\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\obj\\",
+      "projectPath": "d:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\Beast_Blitz.Testing.csproj",
+      "packagesPath": "C:\\Users\\jiyko\\.nuget\\packages\\",
+      "outputPath": "d:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz\\Beast_Blitz.Testing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\eliza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jiyko\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
