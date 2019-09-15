@@ -125,12 +125,15 @@ header {
 #inventory img {
   padding:5px;
   margin:5px;
-  width:40px;
-  height:40px;
+  width:80px;
+  height:80px;
 }
 
-#inventory img:hover {
-  border-color: black;
+.inv-img {
+
+}
+.inv-img:hover {
+  border-color: #470e3f!important;
 }
 
 header a:hover {
