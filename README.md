@@ -4,7 +4,7 @@ Raise your pets with care. Rise to glory in battle. Beast Blitz brings combat an
 
 ## How to Play
 
-TO DO
+[Click here to start playing!](https://beastblitz2019.azurewebsites.net/)
 
 ## Authors
 
