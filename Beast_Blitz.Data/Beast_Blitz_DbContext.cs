@@ -39,10 +39,12 @@ namespace Beast_Blitz.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Monster>().HasOne(m => m.Species);
 
             builder.Entity<Player>().HasMany(p => p.Pets);
             builder.Entity<Player>().HasMany(p => p.Inventory);
 
+            builder.Entity<Pet>().HasOne(p => p.Species);
             builder.Entity<Pet>().HasOne(p => p.CareStats);
             builder.Entity<Pet>().HasOne(p => p.BattleStats);
 
@@ -57,6 +59,7 @@ namespace Beast_Blitz.Data
             builder.Entity<Battlefield>().HasOne(b => b.Boss);
 
             builder.Entity<Species>().HasOne(s => s.BaseStats);
+            
         }
     }
 }
