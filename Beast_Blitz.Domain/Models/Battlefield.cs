@@ -6,8 +6,8 @@ namespace Beast_Blitz.Domain.Models
     public class Battlefield : Location
     {
         // Properties
-        List<Enemy> Enemies;
-        Boss Boss;
+        public List<Enemy> Enemies;
+        public Boss Boss;
 
         // Constructor
         public Battlefield(string name, List<Enemy> enemies, Boss boss) : base(name)
