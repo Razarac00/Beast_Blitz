@@ -1,3 +1,4 @@
+using Beast_Blitz.Domain.Abstracts;
 using Beast_Blitz.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -5,6 +6,14 @@ namespace Beast_Blitz.Data
 {
     public class Beast_Blitz_DbContext : DbContext
     {
+        // ABSTRACTS //
+        public DbSet<User> Users { get; set; }
+        public DbSet<Monster> Monsters { get; set; }
+        public DbSet<Location> Locations { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Accessory> Accessories { get; set; }
+
+        // CONCRETE //
         public DbSet<Player> Players { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Pet> Pets { get; set; }
