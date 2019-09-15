@@ -47,7 +47,11 @@ body {
   background-color: #470E3F;
 }
 
+.table td:first-child {
+  text-align: right;
+}
 .container {
+  width: 1140px;
   background-color: #EDE9E6;
   min-height:800px;
 }
@@ -99,8 +103,34 @@ header {
   color:black;
 }
 
-#profile {
+#profile, #profile .col-12 {
   min-height:500px;
+}
+
+#stats {
+  font-size: 40px;
+  text-align: center;
+}
+
+#stats i {
+  border: 1px solid rgb(83, 19, 19);
+  padding:3px;
+}
+
+#statnum {
+  font-size: 12px;
+  text-align: center;
+}
+
+#inventory img {
+  padding:5px;
+  margin:5px;
+  width:40px;
+  height:40px;
+}
+
+#inventory img:hover {
+  border-color: black;
 }
 
 header a:hover {

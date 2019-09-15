@@ -1,10 +1,103 @@
-<h3>Your Profile</h3>
+@{
+    ViewData["Title"] = "_UserName's Profile";
+}
+
+<h3>_UserName's Profile</h3>
 
 <div id="profile" class="row border shadow m-2">
-    <div class="col-4">
-        test
+    <div class="col-lg-4">
+        <div class="row mx-2 my-3">
+            <div class="col-12 m-2 border shadow">
+                <img src="/img/slime.gif" alt="Player beast" class="img-fluid pt-2">
+                
+                <table class="table">
+                    <tr>
+                        <td>Name</td>
+                        <td>_PetName</td>
+                    </tr>
+                    <tr>
+                        <td>Birthday</td>
+                        <td>January 1, 2019</td>
+                    </tr>
+                </table>
+
+                <div class="row " id="stats">
+                    <div class="col-4">
+                        <i class="fas fa-smile-beam mx-auto"></i>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-drumstick-bite mx-auto"></i>
+                    </div>
+                    <div class="col-4">
+                        <i class="fas fa-bath mx-auto"></i>
+                    </div>
+                </div>
+                <div class="row my-1" id="statnum">
+                    <div class="col-4">
+                        100/100
+                    </div>
+                    <div class="col-4">
+                        100/100
+                    </div>
+                    <div class="col-4">
+                        100/100
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-8">
-        test
+    <div class="col-lg-8">
+        <div class="row mx-2 my-3">
+            <div class="col-12 m-2 border shadow">
+                <h5>Inventory</h5>
+                <div id="inventory">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                        <li class="list-inline-item">
+                            <img src="/img/potion.png" alt="_ItemName" class="img-rounded border">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
