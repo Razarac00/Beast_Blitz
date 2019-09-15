@@ -33,7 +33,7 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(User user)
+        public IActionResult Register(Player newPlayer)
         {
             if(ModelState.IsValid)
             {
