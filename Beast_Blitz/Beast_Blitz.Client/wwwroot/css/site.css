@@ -115,6 +115,7 @@ header {
 #stats i {
   border: 1px solid rgb(83, 19, 19);
   padding:3px;
+  color: green;
 }
 
 #statnum {
@@ -129,10 +130,7 @@ header {
   height:80px;
 }
 
-.inv-img {
-
-}
-.inv-img:hover {
+#inventory img:hover {
   border-color: #470e3f!important;
 }
 
