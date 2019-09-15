@@ -21,6 +21,13 @@ namespace Beast_Blitz.Domain.Models
       Coins = 0;
     }
 
+    public Player()
+    {
+      Pets = new List<Pet>();
+      Inventory = new List<Item>();
+      Coins = 0;
+    }
+
     // Methods
     public void AddNewPet(Species species, string color, string name)
     {

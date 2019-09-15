@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Abstracts
         {
           Image = image;
         }
+
+        public Accessory()
+        {
+          Image = "defaultImage";
+        }
     }
 }

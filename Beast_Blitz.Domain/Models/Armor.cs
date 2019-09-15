@@ -13,7 +13,7 @@ namespace Beast_Blitz.Domain.Models
           Defense = defense;
         }
 
-        public Armor() : base("defaultArmor", 10, "defaultArmor.jpg")
+        public Armor()
         {
           Defense = 2;
         }

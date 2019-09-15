@@ -14,5 +14,11 @@ namespace Beast_Blitz.Domain.Models
           Stat = stat;
           Amt = amt; 
         }
+
+        public Potion()
+        {
+          Stat = "defaultStat";
+          Amt = 10;
+        }
     }
 }

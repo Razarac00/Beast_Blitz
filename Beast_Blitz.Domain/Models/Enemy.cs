@@ -13,7 +13,7 @@ namespace Beast_Blitz.Domain.Models
           CoinReward = coinreward; 
         }
 
-        public Enemy() : base(new Species(), "defaultColor")
+        public Enemy()
         {
           CoinReward = 10;
         }
