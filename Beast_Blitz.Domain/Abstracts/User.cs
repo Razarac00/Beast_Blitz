@@ -8,11 +8,18 @@ namespace Beast_Blitz.Domain.Abstracts
         public string Password { get; set; }
 
         // Constructor
-        public User(string e, string u, string p) 
+        public User(string email, string username, string password) 
         {
-          Email = e;
-          Username = u;
-          Password = p;
+          Email = email;
+          Username = username;
+          Password = password;
+        }
+
+        public User()
+        {
+          Email = "defaultEmail";
+          Username = "defaultUsername";
+          Password = "defaultPassword";
         }
     }
 }

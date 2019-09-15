@@ -10,5 +10,10 @@ namespace Beast_Blitz.Domain.Abstracts
         {
           Name = name;
         }
+
+        public Location()
+        {
+          Name = "defaultLocation";
+        }
     }
 }

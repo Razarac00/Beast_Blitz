@@ -11,6 +11,10 @@ namespace Beast_Blitz.Domain.Models
         {
         }
 
+        public Home()
+        {
+        }
+
         // Methods
         public void Feed(Pet pet, Food food)
         {

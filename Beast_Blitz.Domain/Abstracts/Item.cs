@@ -19,5 +19,12 @@ namespace Beast_Blitz.Domain.Abstracts
           BuyCost = basecost;
           SellCost = Convert.ToInt32(BuyCost * SELL_PENALTY);
         }
+
+        public Item()
+        {
+          Name = "defaultItem";
+          BuyCost = 10;
+          SellCost = 5;
+        }
     }
 }

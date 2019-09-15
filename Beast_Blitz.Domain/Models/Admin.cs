@@ -9,6 +9,10 @@ namespace Beast_Blitz.Domain.Models
     {
     }
 
+    public Admin() 
+    {
+    }
+
     // Methods
     void AddNewSpecies(Species species)
     {
