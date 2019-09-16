@@ -9,7 +9,8 @@ namespace Beast_Blitz.Domain.Models
         // Backing Field
         private List<Item> inventory = new List<Item>();
         // Properties
-        protected List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
+        [NotMapped]
+        public List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
         public List<ShopItem> ShopItems { get; set; }
 
         // Constructors
@@ -57,9 +58,9 @@ namespace Beast_Blitz.Domain.Models
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
-          if (Inventory.Contains(item) && player.Coins >= item.SellCost())
+          if (Inventory.Contains(item) && player.Coins >= item.BuyCost)
           {
-            player.Coins = player.Coins - item.SellCost();
+            player.Coins = player.Coins - item.BuyCost;
             player.Inventory.Add(item);
             return true;
           } else

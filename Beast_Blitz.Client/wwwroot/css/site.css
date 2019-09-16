@@ -51,7 +51,6 @@ body {
   text-align: right;
 }
 .container {
-  width: 1140px;
   background-color: #EDE9E6;
   min-height:800px;
 }
@@ -190,4 +189,16 @@ header a:hover {
 .login tr td:first-child {
   text-align: right;
   padding:5px;
+}
+
+#petcreator {
+  margin: 5px;
+}
+
+#petcreator img {
+  border: 2px solid rgba(237, 233, 230, 0);
+}
+#petcreator img:hover {
+  border: 2px solid #df9b6d;
+  cursor: pointer;
 }

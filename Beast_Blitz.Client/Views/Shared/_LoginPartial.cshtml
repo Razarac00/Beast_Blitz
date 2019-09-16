@@ -1,14 +1,12 @@
-<!-- model for user -->
-
-<form action="" method="post">
+<form asp-action="Login" asp-controller="User" method="post">
     <table class="login">
         <tr>
             <td><label for="Username">Username</label></td>
-            <td><input type="text" name="Username" id="Username" class="form-control"></td>
+            <td><input type="text" name="Username" class="form-control" required></td>
         </tr>
         <tr>
             <td> <label for="Password">Password</label></td>
-            <td><input type="password" name="Password" id="Password" class="form-control"></td>
+            <td><input type="password" name="Password" class="form-control" required></td>
         </tr>
         <tr>
             <td></td>

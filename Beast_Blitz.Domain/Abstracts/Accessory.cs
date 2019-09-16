@@ -9,13 +9,13 @@ namespace Beast_Blitz.Domain.Abstracts
         [DataType(DataType.Text, ErrorMessage = "Image must be text")]
         string Image { get; set; }
 
-        // Constructor
-        public Accessory(string name, int basecost, string image) : base(name, basecost)
+        // Constructors
+        protected Accessory(string name, int basecost, string image) : base(name, basecost)
         {
           Image = image;
         }
 
-        public Accessory()
+        protected Accessory()
         {
           Image = "defaultImage";
         }

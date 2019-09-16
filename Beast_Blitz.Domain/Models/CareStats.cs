@@ -14,13 +14,13 @@ namespace Beast_Blitz.Domain.Models
         public DateTime LastPlayed { get; set; }
 
         // Constants
-        int MAX = 100;
-        int MIN = 0;
-        int DAILY_DECREASE = 5;
-        int BATTLE_DECREASE = 10;
-        int FEED_DECREASE = 5; 
-        int PLAY_AMT = 5;
-        int CLEAN_AMT = 20;
+        readonly int MAX = 100;
+        readonly int MIN = 0;
+        readonly int DAILY_DECREASE = 5;
+        readonly int BATTLE_DECREASE = 10;
+        readonly int FEED_DECREASE = 5; 
+        readonly int PLAY_AMT = 5;
+        readonly int CLEAN_AMT = 20;
 
         // Constructor
         public CareStats()

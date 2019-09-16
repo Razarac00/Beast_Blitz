@@ -19,10 +19,10 @@ namespace Beast_Blitz.Domain.Models
         public int ExperienceNeeded { get; set; }
 
         // Constants
-        int STAT_UP = 5;
-        int BASE_HEALTH = 20; 
-        int BASE_MAGIC = 20;
-        int BASE_EXPERIENCE_NEEDED = 20;
+        readonly int STAT_UP = 5;
+        readonly int BASE_HEALTH = 20; 
+        readonly int BASE_MAGIC = 20;
+        readonly int BASE_EXPERIENCE_NEEDED = 20;
 
         // Constructor
         public BattleStats()
@@ -54,7 +54,7 @@ namespace Beast_Blitz.Domain.Models
         }
 
         // Methods
-        void LevelUp(string stat)
+        public void LevelUp(string stat)
         {
           if (stat.Equals("Speed"))
           {

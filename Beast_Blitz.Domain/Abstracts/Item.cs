@@ -23,22 +23,23 @@ namespace Beast_Blitz.Domain.Abstracts
         public int BuyCost { get; set; }
 
         // Constants
-        double SELL_PENALTY = .25; 
+        readonly double SELL_PENALTY = .25; 
 
-        // Methods
-        public int SellCost()
-        {
-            return Convert.ToInt32(BuyCost * SELL_PENALTY);
-        }
         //Constructor
-        public Item(string name, int basecost)
+        protected Item(string name, int basecost)
         {
           Name = name; 
           BuyCost = basecost;
         }
 
-        public Item()
+        protected Item()
         {
+        }
+
+        // Methods
+        public int SellCost()
+        {
+            return Convert.ToInt32(BuyCost * SELL_PENALTY);
         }
     }
 }

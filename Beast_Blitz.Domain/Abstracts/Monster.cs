@@ -5,8 +5,9 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Monster
     {
-        // DATA
+        // Data
         public int MonsterID { get; set; }
+
         // Properties
         [Required(ErrorMessage = "Species is required")]
         public Species Species { get; set; }
@@ -16,14 +17,14 @@ namespace Beast_Blitz.Domain.Abstracts
         public string Color { get; set; }
 
         // Constructors 
-        public Monster(Species species, string color) 
+        protected Monster(Species species, string color) 
         {
           Species = species; 
           Color = color; 
           BattleStats = species.BaseStats;
         }
 
-        public Monster()
+        protected Monster()
         {
           Species = new Species();
           BattleStats = new BattleStats();
