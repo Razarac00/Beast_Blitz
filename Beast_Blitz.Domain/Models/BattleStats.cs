@@ -7,16 +7,16 @@ namespace Beast_Blitz.Domain.Models
         // DATA
         public int BattleStatsID { get; set; }
         // Properties
-        int Speed { get; set; }
-        int Attack { get; set; }
-        int Defense { get; set; }
-        int Health { get; set; }
-        int MaxHealth { get; set; }
-        int Magic { get; set; }
-        int MaxMagic { get; set; }
-        int Level { get; set; }
-        int Experience { get; set; }
-        int ExperienceNeeded { get; set; }
+        public int Speed { get; set; }
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int Health { get; set; }
+        public int MaxHealth { get; set; }
+        public int Magic { get; set; }
+        public int MaxMagic { get; set; }
+        public int Level { get; set; }
+        public int Experience { get; set; }
+        public int ExperienceNeeded { get; set; }
 
         // Constants
         int STAT_UP = 5;
