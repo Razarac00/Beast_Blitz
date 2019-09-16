@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Beast_Blitz.Domain.Abstracts;
 
 namespace Beast_Blitz.Domain.Models
@@ -7,7 +8,10 @@ namespace Beast_Blitz.Domain.Models
   {
     // Properties 
     public List<Pet> Pets { get; set; }
+
+    [NotMapped]
     public List<Item> Inventory { get; set; }
+    public List<UserItems> UserItems { get; set; }
     public int Coins { get; set; }
 
     // Constants
