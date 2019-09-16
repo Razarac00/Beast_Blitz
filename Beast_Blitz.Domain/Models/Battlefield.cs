@@ -18,11 +18,6 @@ namespace Beast_Blitz.Domain.Models
 
         public Battlefield()
         {
-          Species species = new Species();
-          Enemy enemy = new Enemy();
-          Boss = new Boss();
-          Enemies = new List<Enemy>();
-          Enemies.Add(enemy);
         }
 
         // Methods 
