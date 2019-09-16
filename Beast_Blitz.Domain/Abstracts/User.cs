@@ -2,6 +2,8 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class User
     {
+        // DATA
+        public int UserID { get; set; }
         // Properties
         public string Email { get; set; }
         public string Username { get; set; }

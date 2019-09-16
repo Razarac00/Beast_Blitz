@@ -4,6 +4,8 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Monster
     {
+        // DATA
+        public int MonsterID { get; set; }
         // Properties
         public Species Species { get; set; }
         public BattleStats BattleStats { get; set; }
