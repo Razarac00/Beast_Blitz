@@ -22,14 +22,18 @@ namespace Beast_Blitz.Domain.Abstracts
         [Required(ErrorMessage = "BuyCost is required")]
         public int BuyCost { get; set; }
 
+        [DataType(DataType.Text, ErrorMessage = "Image must be text")]
+        string Image { get; set; }
+
         // Constants
         readonly double SELL_PENALTY = .25; 
 
         //Constructor
-        protected Item(string name, int basecost)
+        protected Item(string name, int basecost, string img)
         {
           Name = name; 
           BuyCost = basecost;
+          Image = img;
         }
 
         protected Item()

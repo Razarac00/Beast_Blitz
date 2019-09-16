@@ -117,7 +117,7 @@ namespace Beast_Blitz.Testing
           //Given
           CareStats carestats = new CareStats();
           carestats.SubtractFullness(100);
-          Food food = new Food("testFood", 20, 20);
+          Food food = new Food("testFood", 20, "testImg", 20);
           carestats.Feed(food);
           
           //When
@@ -137,7 +137,7 @@ namespace Beast_Blitz.Testing
         {
           //Given
           CareStats carestats = new CareStats();
-          Food food = new Food("testFood", 20, 20);
+          Food food = new Food("testFood", 20, "testImg", 20);
           carestats.Feed(food);
           
           //When
