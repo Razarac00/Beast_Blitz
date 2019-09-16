@@ -4,6 +4,8 @@ namespace Beast_Blitz.Domain.Models
 {
     public class BattleStats
     {
+        // DATA
+        public int BattleStatsID { get; set; }
         // Properties
         int Speed { get; set; }
         int Attack { get; set; }
