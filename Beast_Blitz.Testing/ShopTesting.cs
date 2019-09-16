@@ -7,23 +7,23 @@ namespace Beast_Blitz.Testing
 {
     public class ShopTesting
     {
-        [Fact]
-        public void CanBeConstructedEmpty()
-        {
-          //Given
-          Shop shop = new Shop("testShop");
+        // [Fact]
+        // public void CanBeConstructedEmpty()
+        // {
+        //   //Given
+        //   Shop shop = new Shop("testShop");
           
-          //When
-          string expectedName = "testShop";
-          string actualName = shop.Name;
+        //   //When
+        //   string expectedName = "testShop";
+        //   string actualName = shop.Name;
 
-          int expectedInventory = 0;
-          int actualInventory = shop.Inventory.Count;
+        //   int expectedInventory = 0;
+        //   int actualInventory = shop.Inventory.Count;
           
-          //Then
-          Assert.True(expectedName == actualName);
-          Assert.True(expectedInventory == actualInventory);
-        }
+        //   //Then
+        //   Assert.True(expectedName == actualName);
+        //   Assert.True(expectedInventory == actualInventory);
+        // }
 
         [Fact]
         public void CanBeConstructedWithList()
@@ -44,51 +44,51 @@ namespace Beast_Blitz.Testing
           Assert.True(expected == actual);
         }
 
-        [Fact]
-        public void BuyWorks()
-        {
-          //Given
-          Shop shop = new Shop();
-          Armor testArmor = new Armor("testArmor", 10, "testArmor", 4);
-          shop.Inventory.Add(testArmor);
+        // [Fact]
+        // public void BuyWorks()
+        // {
+        //   //Given
+        //   Shop shop = new Shop();
+        //   Armor testArmor = new Armor("testArmor", 10, "testArmor", 4);
+        //   shop.Inventory.Add(testArmor);
 
-          Player player = new Player("testEmail", "testUsername", "testPassword");
-          player.Coins = 20;
+        //   Player player = new Player("testEmail", "testUsername", "testPassword");
+        //   player.Coins = 20;
 
-          shop.Buy(player, testArmor);
+        //   shop.Buy(player, testArmor);
           
-          //When
-          bool expectedInventory = true;
-          bool actualInventory = player.Inventory.Contains(testArmor);
+        //   //When
+        //   bool expectedInventory = true;
+        //   bool actualInventory = player.Inventory.Contains(testArmor);
 
-          int expectedCoins = 10;
-          int actualCoins = player.Coins;
+        //   int expectedCoins = 10;
+        //   int actualCoins = player.Coins;
           
-          //Then
-          Assert.True(expectedInventory == actualInventory);
-          Assert.True(expectedCoins == actualCoins);
-        }
+        //   //Then
+        //   Assert.True(expectedInventory == actualInventory);
+        //   Assert.True(expectedCoins == actualCoins);
+        // }
 
-        [Fact]
-        public void BuyDenialWorks()
-        {
-          //Given
-          Shop shop = new Shop();
-          Armor testArmor = new Armor("testArmor", 10, "testArmor", 4);
-          shop.Inventory.Add(testArmor);
+        // [Fact]
+        // public void BuyDenialWorks()
+        // {
+        //   //Given
+        //   Shop shop = new Shop();
+        //   Armor testArmor = new Armor("testArmor", 10, "testArmor", 4);
+        //   shop.Inventory.Add(testArmor);
 
-          Player player = new Player("testEmail", "testUsername", "testPassword");
-          player.Coins = 5;
+        //   Player player = new Player("testEmail", "testUsername", "testPassword");
+        //   player.Coins = 5;
 
-          shop.Buy(player, testArmor);
+        //   shop.Buy(player, testArmor);
           
-          //When
-          int expectedCoins = 5;
-          int actualCoins = player.Coins;
+        //   //When
+        //   int expectedCoins = 5;
+        //   int actualCoins = player.Coins;
           
-          //Then
-          Assert.True(expectedCoins == actualCoins);
-        }
+        //   //Then
+        //   Assert.True(expectedCoins == actualCoins);
+        // }
 
         [Fact]
         public void SellWorks()
