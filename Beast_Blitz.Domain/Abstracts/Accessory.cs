@@ -7,7 +7,7 @@ namespace Beast_Blitz.Domain.Abstracts
         // Properties 
         string Image { get; set; }
 
-        // Constructor
+        // Constructors
         protected Accessory(string name, int basecost, string image) : base(name, basecost)
         {
           Image = image;
