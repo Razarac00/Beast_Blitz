@@ -4,8 +4,9 @@
 
 @model Beast_Blitz.Domain.Models.Player
 
+<h2 class="my-4">Join Today!</h2>
 <form asp-action="Register" asp-controller="User" method="post">
-    <table class="table">
+    <table class="table table-borderless">
         <tr>
             <td><label asp-for="Username"></label></td>
             <td><input type="text" class="form-control" asp-for="Username"></td>
@@ -18,8 +19,10 @@
             <td><label asp-for="Password"></label></td>
             <td><input type="password" class="form-control" asp-for="Password"></td>
         </tr>
+    </table>
 
         @Html.Partial("_PetCreatorPartial")
         @Html.AntiForgeryToken()
-    </table>
+        
+        <button type="submit" class="btn btn-dark form-control">Register!</button>
 </form>

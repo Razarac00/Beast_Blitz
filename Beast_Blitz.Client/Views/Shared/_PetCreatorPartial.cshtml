@@ -1,1 +1,43 @@
-<!-- model for pet ? -->
+@model Beast_Blitz.Domain.Models.Pet
+<h4 class="text-center">Choose your first Beast!</h4>
+
+<div class="row p-2 m-2" id="petcreator">
+    <div class="col-4">
+        <img src="/img/ghost.gif" class="img-fluid" alt="snake" species_name="Snake" species_desc="These spooky companions are loyal, but they get lost often not because they're invisible, but because they have bad memory. Ghosts attack using magic damage." species_stats="">
+    </div>
+    <div class="col-4">
+        <img src="/img/rat.gif" class="img-fluid" alt="rat" species_name="Rat" species_desc="This cunning companion is quick and sociable. Rats are quick on their feet and are a little timid and quick to scare." species_stats="">
+    </div>
+    <div class="col-4">
+        <img src="/img/slime.gif" class="img-fluid" alt="slime" species_name="Slime" species_desc="This gelatinous companion goes with the flow and can fit through anything the size of its mouth. Slimes are heartier and have more stamina." species_stats="">
+    </div>
+</div>
+<div class="row my-2 border" id="petwindow">
+    <div class="col-5" >
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250" height="250">
+            <defs>
+                <filter id="colorMask1">
+                    <feFlood flood-color="#FFFFFF" result="flood" />
+                    <feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                </filter>
+            </defs>
+            <image width="100%" height="100%" xlink:href="" class="img-fluid" filter="url(#colorMask1)">
+        </svg>
+    </div>
+    <div class="col-7">
+        <h5></h5>
+        <p></p>
+
+        <table class="table table-borderless">
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><input type="text" asp-for="Name" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Color"></label></td>
+                <td><input type="color" asp-for="Color" class="form-control" value="#FFFFFF" id="colorpicker"></td>
+            </tr>
+        </table>
+        
+    </div>
+</div>
