@@ -1,0 +1,21 @@
+@model List<Beast_Blitz.Domain.Models.Element>
+
+<table class="table my-3">
+    <caption><h3>Elements</h3></caption>
+    <tr>
+        <th>ElementID</th>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>@item.ElementID</td>
+        <td>@item.Name</td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    }
+    <tr>
+        <td colspan="3"><a asp-action="AddNewElement" asp-controller="Admin" class="btn">Add New Element...</a></td>
+    </tr>
+</table>

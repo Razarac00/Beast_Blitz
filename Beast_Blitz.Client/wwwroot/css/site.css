@@ -208,3 +208,8 @@ svg {
   display:block;
   margin:auto;
 }
+
+.shop {
+  border: 4px solid rgba(90, 90, 90, 0.445);
+  border-radius: 5px;
+}
