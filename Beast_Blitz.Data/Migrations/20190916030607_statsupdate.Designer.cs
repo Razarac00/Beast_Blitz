@@ -4,14 +4,16 @@ using Beast_Blitz.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Beast_Blitz.Data.Migrations
 {
     [DbContext(typeof(Beast_Blitz_DbContext))]
-    partial class Beast_Blitz_DbContextModelSnapshot : ModelSnapshot
+    [Migration("20190916030607_statsupdate")]
+    partial class statsupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
