@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Beast_Blitz.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Beast_Blitz.Domain.Abstracts;
+using Beast_Blitz.Data;
 
 namespace Beast_Blitz.Client.Controllers
 {
     public class UserController : Controller
     {
+        Beast_Blitz_DbContext _db = new Beast_Blitz_DbContext();
         public IActionResult Profile()
         {
             return View();

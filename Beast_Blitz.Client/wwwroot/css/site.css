@@ -202,3 +202,8 @@ header a:hover {
   border: 2px solid #df9b6d;
   cursor: pointer;
 }
+
+form svg {
+  display:block;
+  margin:auto;
+}
