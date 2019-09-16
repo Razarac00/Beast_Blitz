@@ -34,19 +34,19 @@ namespace Beast_Blitz.Domain.Models
       return new Armor(name, basecost, image, defense);
     }
 
-    public Food AddNewFood(string name, int basecost, int fullnessamt)
+    public Food AddNewFood(string name, int basecost, string img, int fullnessamt)
     {
-      return new Food(name, basecost, fullnessamt);
+      return new Food(name, basecost, img, fullnessamt);
     }
 
-    public Potion AddNewPotion(string name, int basecost, string stat, int amt)
+    public Potion AddNewPotion(string name, int basecost, string img, string stat, int amt)
     {
-      return new Potion(name, basecost, stat, amt);
+      return new Potion(name, basecost, img, stat, amt);
     }
 
-    public Treat AddNewTreat(string name, int basecost, int happinessamt)
+    public Treat AddNewTreat(string name, int basecost, string img, int happinessamt)
     {
-      return new Treat(name, basecost, happinessamt);
+      return new Treat(name, basecost, happinessamt, img);
     }
 
     public Shop AddToShop(Item item, Shop shop)
