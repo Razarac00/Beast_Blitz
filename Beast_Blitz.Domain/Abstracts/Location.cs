@@ -4,8 +4,9 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Location
     {
-        // DATA
+        // Data
         public int LocationID { get; set; }
+
         // Properties
         [Required(ErrorMessage = "Name is required")]
         [MaxLength(50)]
@@ -14,12 +15,12 @@ namespace Beast_Blitz.Domain.Abstracts
         public string Name { get; set; }
 
         // Constructor
-        public Location(string name)
+        protected Location(string name)
         {
           Name = name;
         }
 
-        public Location()
+        protected Location()
         {
           Name = "defaultLocation";
         }
