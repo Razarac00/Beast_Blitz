@@ -4,8 +4,9 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class User
     {
-        // DATA
+        // Data
         public int UserID { get; set; }
+
         // Properties
         [Required(ErrorMessage = "Email is required")]
         [MaxLength(100)]
@@ -22,15 +23,15 @@ namespace Beast_Blitz.Domain.Abstracts
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        // Constructor
-        public User(string email, string username, string password) 
+        // Constructors
+        protected User(string email, string username, string password) 
         {
           Email = email;
           Username = username;
           Password = password;
         }
 
-        public User()
+        protected User()
         {
         }
     }

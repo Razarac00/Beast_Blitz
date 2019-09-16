@@ -8,7 +8,7 @@ namespace Beast_Blitz.Domain.Models
         public int FullnessAmt { get; set; }
 
         // Constructor
-        public Food(string name, int basecost, int fullnessamt) : base(name, basecost)
+        public Food(string name, int basecost, string img, int fullnessamt) : base(name, basecost, img)
         {
           FullnessAmt = fullnessamt;
         }

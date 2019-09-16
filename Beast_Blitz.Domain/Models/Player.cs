@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Beast_Blitz.Domain.Abstracts;
 
 namespace Beast_Blitz.Domain.Models
@@ -7,11 +8,14 @@ namespace Beast_Blitz.Domain.Models
   {
     // Properties 
     public List<Pet> Pets { get; set; }
+
+    [NotMapped]
     public List<Item> Inventory { get; set; }
+    public List<UserItem> UserItems { get; set; }
     public int Coins { get; set; }
 
     // Constants
-    int MAX_PETS = 3; 
+    readonly int MAX_PETS = 3; 
 
     // Constructor
     public Player(string email, string username, string password) : base(email, username, password)

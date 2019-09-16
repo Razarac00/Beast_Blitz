@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Beast_Blitz.Domain.Models;
 
 namespace Beast_Blitz.Domain.Abstracts
 {
@@ -7,6 +9,9 @@ namespace Beast_Blitz.Domain.Abstracts
     {
         // DATA
         public int ItemID { get; set; }
+        public List<UserItem> UserItems { get; set; }
+        public List<ShopItem> ShopItems { get; set; }
+
         // Properties
         [Required(ErrorMessage = "Username is required")]
         [MaxLength(50)]
@@ -17,23 +22,28 @@ namespace Beast_Blitz.Domain.Abstracts
         [Required(ErrorMessage = "BuyCost is required")]
         public int BuyCost { get; set; }
 
+        [DataType(DataType.Text, ErrorMessage = "Image must be text")]
+        string Image { get; set; }
+
         // Constants
-        double SELL_PENALTY = .25; 
+        readonly double SELL_PENALTY = .25; 
+
+        //Constructor
+        protected Item(string name, int basecost, string img)
+        {
+          Name = name; 
+          BuyCost = basecost;
+          Image = img;
+        }
+
+        protected Item()
+        {
+        }
 
         // Methods
         public int SellCost()
         {
             return Convert.ToInt32(BuyCost * SELL_PENALTY);
-        }
-        //Constructor
-        public Item(string name, int basecost)
-        {
-          Name = name; 
-          BuyCost = basecost;
-        }
-
-        public Item()
-        {
         }
     }
 }

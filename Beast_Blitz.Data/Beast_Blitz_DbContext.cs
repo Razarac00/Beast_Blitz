@@ -34,15 +34,38 @@ namespace Beast_Blitz.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("server=localhost;initial catalog=Beast_Blitz_Db;user id=sa;password=Password12345");
+            builder.UseSqlServer("Server=tcp:project-zero-john.database.windows.net,1433;Initial Catalog=Beast_Blitz_Db;Persist Security Info=False;User ID=sqladmin;Password=SpeedisTown23;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            // builder.UseSqlServer("server=localhost;initial catalog=Beast_Blitz_Db;user id=sa;password=Password12345");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<ShopItem>().HasKey(si => new {si.LocationID, si.ItemID});
+            builder.Entity<ShopItem>()
+                   .HasOne(si => si.Shop)
+                   .WithMany(s => s.ShopItems)
+                   .HasForeignKey(si => si.LocationID);
+            builder.Entity<ShopItem>()
+                   .HasOne(si => si.Item)
+                   .WithMany(i => i.ShopItems)
+                   .HasForeignKey(si => si.ItemID);
+
+            builder.Entity<UserItem>().HasKey(ui => new {ui.UserID, ui.ItemID});
+            builder.Entity<UserItem>()
+                   .HasOne(ui => ui.Player)
+                   .WithMany(u => u.UserItems)
+                   .HasForeignKey(ui => ui.UserID);
+
+            builder.Entity<UserItem>()
+                   .HasOne(ui => ui.Item)
+                   .WithMany(i => i.UserItems)
+                   .HasForeignKey(ui => ui.ItemID);
+
             builder.Entity<Monster>().HasOne(m => m.Species);
 
+            builder.Entity<User>().HasIndex(u => u.Username).IsUnique();
+
             builder.Entity<Player>().HasMany(p => p.Pets);
-            builder.Entity<Player>().HasMany(p => p.Inventory);
 
             builder.Entity<Pet>().HasOne(p => p.CareStats);
             builder.Entity<Pet>().HasOne(p => p.BattleStats);
@@ -51,8 +74,6 @@ namespace Beast_Blitz.Data
 
             builder.Entity<Boss>().HasOne(b => b.BattleStats);
             builder.Entity<Boss>().HasOne(b => b.Reward);
-
-            builder.Entity<Shop>().HasMany(s => s.Inventory);
 
             builder.Entity<Battlefield>().HasMany(b => b.Enemies);
             builder.Entity<Battlefield>().HasOne(b => b.Boss);
