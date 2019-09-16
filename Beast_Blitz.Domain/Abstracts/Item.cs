@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Beast_Blitz.Domain.Models;
 
 namespace Beast_Blitz.Domain.Abstracts
 {
@@ -7,6 +9,8 @@ namespace Beast_Blitz.Domain.Abstracts
     {
         // DATA
         public int ItemID { get; set; }
+        public List<User> Users { get; set; }
+        public List<Shop> Shops { get; set; }
         // Properties
         [Required(ErrorMessage = "Username is required")]
         [MaxLength(50)]
