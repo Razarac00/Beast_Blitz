@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class User
@@ -5,8 +7,16 @@ namespace Beast_Blitz.Domain.Abstracts
         // DATA
         public int UserID { get; set; }
         // Properties
+        [Required]
+        [MaxLength(100)]
         public string Email { get; set; }
+
+        [Required]
+        [MaxLength(25)]
         public string Username { get; set; }
+        
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         // Constructor
