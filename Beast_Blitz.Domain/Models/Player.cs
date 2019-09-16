@@ -34,6 +34,14 @@ namespace Beast_Blitz.Domain.Models
       }
     }
 
+    public void AddNewPet(Pet pet)
+    {
+      if (Pets.Count < MAX_PETS)
+      {
+        Pets.Add(pet);
+      }
+    }
+
     public void RemovePet(Pet pet)
     {
       if (Pets.Count > 0)
