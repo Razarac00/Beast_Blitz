@@ -18,12 +18,12 @@ namespace Beast_Blitz.Domain.Models
         // Methods
         public void Feed(Pet pet, Food food)
         {
-          // To do
+          pet.CareStats.Feed(food);
         }
 
         public void Clean(Pet pet)
         {
-          // To do
+          pet.CareStats.Clean();
         }
     }
 }

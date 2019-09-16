@@ -103,5 +103,17 @@ namespace Beast_Blitz.Domain.Models
           SubtractFullness(DAILY_DECREASE * sinceLastFed);
           SubtractHappiness(DAILY_DECREASE * sinceLastPlayed);
         } 
+
+        public void Clean()
+        {
+          if (Cleanliness + CLEAN_AMT <= MAX)
+          {
+            Cleanliness = Cleanliness + CLEAN_AMT;
+          } else 
+          {
+            Cleanliness = MAX;
+          }
+          
+        }
     }
 }
