@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Beast_Blitz.Domain.Models;
 
 namespace Beast_Blitz.Domain.Abstracts
@@ -7,8 +8,11 @@ namespace Beast_Blitz.Domain.Abstracts
         // DATA
         public int MonsterID { get; set; }
         // Properties
+        [Required(ErrorMessage = "Species is required")]
         public Species Species { get; set; }
         public BattleStats BattleStats { get; set; }
+
+        [Required(ErrorMessage = "Color is required")]
         public string Color { get; set; }
 
         // Constructors 

@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Beast_Blitz.Domain.Abstracts
 {
@@ -7,26 +8,32 @@ namespace Beast_Blitz.Domain.Abstracts
         // DATA
         public int ItemID { get; set; }
         // Properties
+        [Required(ErrorMessage = "Username is required")]
+        [MaxLength(50)]
+        [MinLength(1)]
+        [StringLength(50, ErrorMessage = "Username must be between 5 and 25 characters", MinimumLength = 1)]
         public string Name { get; set; }
+
+        [Required(ErrorMessage = "BuyCost is required")]
         public int BuyCost { get; set; }
-        public int SellCost { get; set; }
 
         // Constants
         double SELL_PENALTY = .25; 
 
+        // Methods
+        public int SellCost()
+        {
+            return Convert.ToInt32(BuyCost * SELL_PENALTY);
+        }
         //Constructor
         public Item(string name, int basecost)
         {
           Name = name; 
           BuyCost = basecost;
-          SellCost = Convert.ToInt32(BuyCost * SELL_PENALTY);
         }
 
         public Item()
         {
-          Name = "defaultItem";
-          BuyCost = 10;
-          SellCost = 5;
         }
     }
 }
