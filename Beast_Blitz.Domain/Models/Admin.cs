@@ -14,48 +14,48 @@ namespace Beast_Blitz.Domain.Models
     }
 
     // Methods
-    Species AddNewSpecies(string name, Element element, BattleStats basestats, string image)
+    public Species AddNewSpecies(string name, Element element, BattleStats basestats, string image)
     {
       return new Species(name, element, basestats, image);
     }
 
-    Element AddNewElement(string name)
+    public Element AddNewElement(string name)
     {
       return new Element(name);
     }
 
-    Shop AddNewShop(string name)
+    public Shop AddNewShop(string name)
     {
       return new Shop(name);
     }
 
-    Armor AddNewArmor(string name, int basecost, string image, int defense)
+    public Armor AddNewArmor(string name, int basecost, string image, int defense)
     {
       return new Armor(name, basecost, image, defense);
     }
 
-    Food AddNewFood(string name, int basecost, int fullnessamt)
+    public Food AddNewFood(string name, int basecost, int fullnessamt)
     {
       return new Food(name, basecost, fullnessamt);
     }
 
-    Potion AddNewPotion(string name, int basecost, string stat, int amt)
+    public Potion AddNewPotion(string name, int basecost, string stat, int amt)
     {
       return new Potion(name, basecost, stat, amt);
     }
 
-    Treat AddNewTreat(string name, int basecost, int happinessamt)
+    public Treat AddNewTreat(string name, int basecost, int happinessamt)
     {
       return new Treat(name, basecost, happinessamt);
     }
 
-    Shop AddToShop(Item item, Shop shop)
+    public Shop AddToShop(Item item, Shop shop)
     {
       shop.Inventory.Add(item);
       return shop;
     }
 
-    Admin AddNewAdmin(string email, string username, string password)
+    public Admin AddNewAdmin(string email, string username, string password)
     {
       return new Admin(email, username, password);
     }
