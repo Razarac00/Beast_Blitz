@@ -4,6 +4,8 @@ namespace Beast_Blitz.Domain.Models
 {
     public class CareStats
     {
+        // DATA
+        public int CareStatsID { get; set; }
         // Properties 
         public int Happiness;
         public int Fullness;

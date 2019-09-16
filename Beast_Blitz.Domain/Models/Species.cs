@@ -2,6 +2,8 @@ namespace Beast_Blitz.Domain.Models
 {
     public class Species
     {
+        // DATA
+        public int SpeciesID { get; set; }
         // Properties
         public string Name { get; set; }
         public Element Element { get; set; }
