@@ -34,11 +34,13 @@ namespace Beast_Blitz.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer("server=localhost;initial catalog=Beast_Blitz_Db;user id=sa;password=Password12345");
+            builder.UseSqlServer("Server=tcp:project-zero-john.database.windows.net,1433;Initial Catalog=Beast_Blitz_Db;Persist Security Info=False;User ID=sqladmin;Password=SpeedisTown23;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            // builder.UseSqlServer("server=localhost;initial catalog=Beast_Blitz_Db;user id=sa;password=Password12345");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<ShopItem>().HasKey(si => new {si.LocationID, si.ItemID});
             builder.Entity<ShopItem>()
                    .HasOne(si => si.Shop)
                    .WithMany(s => s.ShopItems)
@@ -48,6 +50,7 @@ namespace Beast_Blitz.Data
                    .WithMany(i => i.ShopItems)
                    .HasForeignKey(si => si.ItemID);
 
+            builder.Entity<UserItem>().HasKey(ui => new {ui.UserID, ui.ItemID});
             builder.Entity<UserItem>()
                    .HasOne(ui => ui.Player)
                    .WithMany(u => u.UserItems)
