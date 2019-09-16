@@ -29,9 +29,9 @@ namespace Beast_Blitz.Domain.Models
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
-          if (player.Coins >= item.SellCost())
+          if (player.Coins >= item.BuyCost)
           {
-            player.Coins = player.Coins - item.SellCost();
+            player.Coins = player.Coins - item.BuyCost;
             player.Inventory.Add(item);
             return true;
           } else
