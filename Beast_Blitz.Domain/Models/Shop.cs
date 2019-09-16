@@ -10,7 +10,7 @@ namespace Beast_Blitz.Domain.Models
         private List<Item> inventory = new List<Item>();
         // Properties
         protected List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
-        public List<ShopItems> ShopItems { get; set; }
+        public List<ShopItem> ShopItems { get; set; }
 
         // Constructors
         public Shop(string name) : base(name)
@@ -40,11 +40,11 @@ namespace Beast_Blitz.Domain.Models
 
         private List<Item> resetInventory(List<Item> value)
         {
-            ShopItems = new List<ShopItems>();
+            ShopItems = new List<ShopItem>();
 
             foreach (var item in value)
             {
-                var si = new ShopItems();
+                var si = new ShopItem();
                 si.Item = item;
                 si.LocationID = this.LocationID;
                 si.Shop = this;

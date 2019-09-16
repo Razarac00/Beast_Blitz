@@ -2,11 +2,11 @@ using Beast_Blitz.Domain.Abstracts;
 
 namespace Beast_Blitz.Domain.Models
 {
-    public class UserItems
+    public class ShopItem
     {
         // DATA
-        public int UserID { get; set; }
-        public User User { get; set; }
+        public int LocationID { get; set; }
+        public Shop Shop { get; set; }
         public int ItemID { get; set; }
         public Item Item { get; set; }
     }

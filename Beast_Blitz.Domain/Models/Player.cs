@@ -11,7 +11,7 @@ namespace Beast_Blitz.Domain.Models
 
     [NotMapped]
     public List<Item> Inventory { get; set; }
-    public List<UserItems> UserItems { get; set; }
+    public List<UserItem> UserItems { get; set; }
     public int Coins { get; set; }
 
     // Constants

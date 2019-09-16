@@ -39,26 +39,28 @@ namespace Beast_Blitz.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<ShopItems>()
+            builder.Entity<ShopItem>()
                    .HasOne(si => si.Shop)
                    .WithMany(s => s.ShopItems)
                    .HasForeignKey(si => si.LocationID);
-            builder.Entity<ShopItems>()
+            builder.Entity<ShopItem>()
                    .HasOne(si => si.Item)
                    .WithMany(i => i.ShopItems)
                    .HasForeignKey(si => si.ItemID);
 
-            builder.Entity<UserItems>()
+            builder.Entity<UserItem>()
                    .HasOne(ui => ui.Player)
                    .WithMany(u => u.UserItems)
                    .HasForeignKey(ui => ui.UserID);
 
-            builder.Entity<UserItems>()
+            builder.Entity<UserItem>()
                    .HasOne(ui => ui.Item)
                    .WithMany(i => i.UserItems)
                    .HasForeignKey(ui => ui.ItemID);
 
             builder.Entity<Monster>().HasOne(m => m.Species);
+
+            builder.Entity<User>().HasIndex(u => u.Username).IsUnique();
 
             builder.Entity<Player>().HasMany(p => p.Pets);
 
