@@ -147,5 +147,21 @@ namespace Beast_Blitz.Testing
           //Then
           Assert.True(expected.Equals(actual));
         }
+
+        [Fact]
+        public void CleanWorks()
+        {
+          //Given
+          CareStats carestats = new CareStats();
+          carestats.Cleanliness = 0;
+          carestats.Clean();
+          
+          //When
+          int expected = 20;
+          int actual = carestats.Cleanliness;
+          
+          //Then
+          Assert.True(expected == actual);
+        }
     }
 }

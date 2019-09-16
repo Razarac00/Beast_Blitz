@@ -4,6 +4,8 @@ namespace Beast_Blitz.Domain.Abstracts
 {
     public abstract class Item
     {
+        // DATA
+        public int ItemID { get; set; }
         // Properties
         public string Name { get; set; }
         public int BuyCost { get; set; }
@@ -18,6 +20,13 @@ namespace Beast_Blitz.Domain.Abstracts
           Name = name; 
           BuyCost = basecost;
           SellCost = Convert.ToInt32(BuyCost * SELL_PENALTY);
+        }
+
+        public Item()
+        {
+          Name = "defaultItem";
+          BuyCost = 10;
+          SellCost = 5;
         }
     }
 }

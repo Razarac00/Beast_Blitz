@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Models
         {
           Happiness = happiness;
         }
+
+        public Hat()
+        {
+          Happiness = 4;
+        }
     }
 }

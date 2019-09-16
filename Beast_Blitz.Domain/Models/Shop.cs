@@ -6,7 +6,7 @@ namespace Beast_Blitz.Domain.Models
     public class Shop : Location
     {
         // Properties
-        public List<Item> Inventory;
+        public List<Item> Inventory { get; set; }
 
         // Constructors
         public Shop(string name) : base(name)
@@ -17,6 +17,11 @@ namespace Beast_Blitz.Domain.Models
         public Shop(string name, List<Item> inventory) : base(name)
         {
           Inventory = inventory;
+        }
+
+        public Shop()
+        {
+          Inventory = new List<Item>();
         }
 
         // Methods

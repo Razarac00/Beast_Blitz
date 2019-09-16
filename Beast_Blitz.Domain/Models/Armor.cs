@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Models
         {
           Defense = defense;
         }
+
+        public Armor()
+        {
+          Defense = 2;
+        }
     }
 }

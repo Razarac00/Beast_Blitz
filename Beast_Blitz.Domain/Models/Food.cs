@@ -12,5 +12,10 @@ namespace Beast_Blitz.Domain.Models
         {
           FullnessAmt = fullnessamt;
         }
+
+        public Food()
+        {
+          FullnessAmt = 10; 
+        }
     }
 }
