@@ -11,7 +11,7 @@ namespace Beast_Blitz.Domain.Models
     public int Coins { get; set; }
 
     // Constants
-    int MAX_PETS = 3; 
+    readonly int MAX_PETS = 3; 
 
     // Constructor
     public Player(string email, string username, string password) : base(email, username, password)

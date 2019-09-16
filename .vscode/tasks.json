@@ -9,6 +9,7 @@
                 "build",
                 "${workspaceFolder}/Beast_Blitz.Client/Beast_Blitz.Client.csproj",
                 "/property:GenerateFullPaths=true",
+
                 "/consoleloggerparameters:NoSummary",
             ],
             "problemMatcher": "$msCompile"

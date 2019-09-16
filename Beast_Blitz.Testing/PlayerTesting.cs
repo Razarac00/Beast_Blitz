@@ -24,6 +24,20 @@ namespace Beast_Blitz.Testing
         }
 
         [Fact]
+        public void CanBeConstructedEmpty()
+        {
+          //Given
+          Player player = new Player();
+          
+          //When
+          string expected = null;
+          string actual = player.Email;
+          
+          //Then
+          Assert.True(expected == actual);
+        }
+
+        [Fact]
         public void AddNewPetWorks()
         {
           //Given
