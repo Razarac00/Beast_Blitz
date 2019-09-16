@@ -19,9 +19,6 @@ namespace Beast_Blitz.Domain.Abstracts
 
         public User()
         {
-          Email = "defaultEmail";
-          Username = "defaultUsername";
-          Password = "defaultPassword";
         }
     }
 }

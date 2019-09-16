@@ -23,9 +23,6 @@ namespace Beast_Blitz.Domain.Models
 
     public Player()
     {
-      Pets = new List<Pet>();
-      Inventory = new List<Item>();
-      Coins = 0;
     }
 
     // Methods
@@ -34,6 +31,14 @@ namespace Beast_Blitz.Domain.Models
       if (Pets.Count < MAX_PETS)
       {
         Pets.Add(new Pet(species, color, name));
+      }
+    }
+
+    public void AddNewPet(Pet pet)
+    {
+      if (Pets.Count < MAX_PETS)
+      {
+        Pets.Add(pet);
       }
     }
 
