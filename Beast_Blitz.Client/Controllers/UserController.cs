@@ -51,7 +51,21 @@ namespace Beast_Blitz.Client.Controllers
             if(ModelState.IsValid)
             {
                 //add to db
-                HttpContext.Session.SetInt32("UserId", 1);
+                var thisSpecies = _db.Species.FirstOrDefault(s => s.Name == speciesName);
+                if(thisSpecies == null)
+                {
+                    ModelState.AddModelError("Name", "Species does not exist!");
+                    return View();
+                }
+
+                newPet.Species = thisSpecies;
+                _db.Pets.Add(newPet);
+                _db.Players.Add(newPlayer);
+                _db.SaveChanges();
+
+                var thisPlayer = _db.Players.Single(p => p.Username == newPlayer.Username);
+
+                HttpContext.Session.SetInt32("UserId", thisPlayer.UserID);
                 return RedirectToAction("Index", "Home");
             }
 

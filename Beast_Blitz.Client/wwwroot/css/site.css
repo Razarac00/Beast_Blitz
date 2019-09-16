@@ -113,6 +113,7 @@ body {
 }
 
 header {
+  color:white;
   padding:20px;
   border-bottom: 1px solid #470e3f7e;
   margin-bottom:15px;
@@ -123,7 +124,7 @@ header {
 
 #title {
   float:left;
-  color:black;
+  color:white;
 }
 
 #profile, #profile .col-12 {
@@ -158,7 +159,7 @@ header {
 }
 
 header a:hover {
-  color:black;
+  color:#470E3F;
   text-decoration: none;
 }
 
@@ -203,7 +204,7 @@ header a:hover {
   cursor: pointer;
 }
 
-form svg {
+svg {
   display:block;
   margin:auto;
 }
