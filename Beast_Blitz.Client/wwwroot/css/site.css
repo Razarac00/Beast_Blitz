@@ -191,3 +191,15 @@ header a:hover {
   text-align: right;
   padding:5px;
 }
+
+#petcreator {
+  margin: 5px;
+}
+
+#petcreator img {
+  border: 2px solid rgba(237, 233, 230, 0);
+}
+#petcreator img:hover {
+  border: 2px solid #df9b6d;
+  cursor: pointer;
+}
