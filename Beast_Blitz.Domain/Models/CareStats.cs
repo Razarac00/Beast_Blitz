@@ -7,11 +7,11 @@ namespace Beast_Blitz.Domain.Models
         // DATA
         public int CareStatsID { get; set; }
         // Properties 
-        public int Happiness;
-        public int Fullness;
-        public int Cleanliness;
-        public DateTime LastFed; 
-        public DateTime LastPlayed;
+        public int Happiness { get; set; }
+        public int Fullness { get; set; }
+        public int Cleanliness { get; set; }
+        public DateTime LastFed { get; set; } 
+        public DateTime LastPlayed { get; set; }
 
         // Constants
         int MAX = 100;
