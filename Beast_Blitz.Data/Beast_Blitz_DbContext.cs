@@ -44,7 +44,6 @@ namespace Beast_Blitz.Data
             builder.Entity<Player>().HasMany(p => p.Pets);
             builder.Entity<Player>().HasMany(p => p.Inventory);
 
-            // builder.Entity<Pet>().HasOne(p => p.Species);
             builder.Entity<Pet>().HasOne(p => p.CareStats);
             builder.Entity<Pet>().HasOne(p => p.BattleStats);
 

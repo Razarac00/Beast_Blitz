@@ -1,0 +1,1601 @@
+{
+  "Beast_Blitz.Domain.dll": {
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Admin.cs": {
+      "Beast_Blitz.Domain.Models.Admin": {
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewSpecies(Beast_Blitz.Domain.Models.Species)": {
+          "Lines": {
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewElement(Beast_Blitz.Domain.Models.Element)": {
+          "Lines": {
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewShop(Beast_Blitz.Domain.Models.Shop)": {
+          "Lines": {
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewItem(Beast_Blitz.Domain.Abstracts.Item)": {
+          "Lines": {
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddToShop(Beast_Blitz.Domain.Abstracts.Item,Beast_Blitz.Domain.Models.Shop)": {
+          "Lines": {
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewLocation(Beast_Blitz.Domain.Abstracts.Location)": {
+          "Lines": {
+            "38": 0,
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewEnemy(Beast_Blitz.Domain.Models.Enemy)": {
+          "Lines": {
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::AddNewAdmin(Beast_Blitz.Domain.Models.Admin)": {
+          "Lines": {
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::.ctor(System.String,System.String,System.String)": {
+          "Lines": {
+            "8": 1,
+            "9": 1,
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Admin::.ctor()": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Armor.cs": {
+      "Beast_Blitz.Domain.Models.Armor": {
+        "System.Int32 Beast_Blitz.Domain.Models.Armor::get_Defense()": {
+          "Lines": {
+            "8": 2
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Armor::.ctor(System.String,System.Int32,System.String,System.Int32)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2,
+            "14": 2
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Armor::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Battlefield.cs": {
+      "Beast_Blitz.Domain.Models.Battlefield": {
+        "System.Collections.Generic.List`1<Beast_Blitz.Domain.Models.Enemy> Beast_Blitz.Domain.Models.Battlefield::get_Enemies()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.Boss Beast_Blitz.Domain.Models.Battlefield::get_Boss()": {
+          "Lines": {
+            "10": 2
+          },
+          "Branches": []
+        },
+        "System.Boolean Beast_Blitz.Domain.Models.Battlefield::Battle(Beast_Blitz.Domain.Models.Pet,Beast_Blitz.Domain.Models.Enemy)": {
+          "Lines": {
+            "30": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Battlefield::.ctor(System.String,System.Collections.Generic.List`1<Beast_Blitz.Domain.Models.Enemy>,Beast_Blitz.Domain.Models.Boss)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Battlefield::.ctor()": {
+          "Lines": {
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\BattleStats.cs": {
+      "Beast_Blitz.Domain.Models.BattleStats": {
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_BattleStatsID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Speed()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Attack()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Defense()": {
+          "Lines": {
+            "12": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Health()": {
+          "Lines": {
+            "13": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_MaxHealth()": {
+          "Lines": {
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Magic()": {
+          "Lines": {
+            "15": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_MaxMagic()": {
+          "Lines": {
+            "16": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Level()": {
+          "Lines": {
+            "17": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_Experience()": {
+          "Lines": {
+            "18": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.BattleStats::get_ExperienceNeeded()": {
+          "Lines": {
+            "19": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::LevelUp(System.String)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0
+          },
+          "Branches": [
+            {
+              "Line": 59,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 14,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 56,
+              "EndOffset": 58,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 56,
+              "EndOffset": 85,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 65,
+              "Offset": 98,
+              "EndOffset": 124,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 137,
+              "EndOffset": 139,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 137,
+              "EndOffset": 163,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 178,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 71,
+              "Offset": 178,
+              "EndOffset": 204,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::TakeDamage(System.Int32)": {
+          "Lines": {
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0
+          },
+          "Branches": [
+            {
+              "Line": 87,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 87,
+              "Offset": 17,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Beast_Blitz.Domain.Models.BattleStats::UseMagic(System.Int32)": {
+          "Lines": {
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "103": 0,
+            "104": 0,
+            "106": 0
+          },
+          "Branches": [
+            {
+              "Line": 98,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 98,
+              "Offset": 17,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::Heal(System.Int32)": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0
+          },
+          "Branches": [
+            {
+              "Line": 110,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 22,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::Restore(System.Int32)": {
+          "Lines": {
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0
+          },
+          "Branches": [
+            {
+              "Line": 121,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 121,
+              "Offset": 22,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::FullHeal()": {
+          "Lines": {
+            "131": 0,
+            "132": 0,
+            "133": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::FullRestore()": {
+          "Lines": {
+            "136": 0,
+            "137": 0,
+            "138": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Beast_Blitz.Domain.Models.BattleStats::AddExperience(System.Int32)": {
+          "Lines": {
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "152": 0
+          },
+          "Branches": [
+            {
+              "Line": 143,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 19,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::.ctor()": {
+          "Lines": {
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.BattleStats::.ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Boss.cs": {
+      "Beast_Blitz.Domain.Models.Boss": {
+        "Beast_Blitz.Domain.Abstracts.Item Beast_Blitz.Domain.Models.Boss::get_Reward()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Boss::.ctor(Beast_Blitz.Domain.Models.Species,System.String,System.Int32,Beast_Blitz.Domain.Abstracts.Item)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Boss::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\CareStats.cs": {
+      "Beast_Blitz.Domain.Models.CareStats": {
+        "System.Int32 Beast_Blitz.Domain.Models.CareStats::get_CareStatsID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.CareStats::get_Happiness()": {
+          "Lines": {
+            "10": 28
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.CareStats::get_Fullness()": {
+          "Lines": {
+            "11": 26
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.CareStats::get_Cleanliness()": {
+          "Lines": {
+            "12": 22
+          },
+          "Branches": []
+        },
+        "System.DateTime Beast_Blitz.Domain.Models.CareStats::get_LastFed()": {
+          "Lines": {
+            "13": 13
+          },
+          "Branches": []
+        },
+        "System.DateTime Beast_Blitz.Domain.Models.CareStats::get_LastPlayed()": {
+          "Lines": {
+            "14": 10
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::AddHappiness(System.Int32)": {
+          "Lines": {
+            "37": 2,
+            "38": 2,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 2
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 22,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::SubtractHappiness(System.Int32)": {
+          "Lines": {
+            "48": 3,
+            "49": 3,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "53": 1,
+            "54": 1,
+            "55": 1,
+            "56": 3
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 49,
+              "Offset": 22,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::SubtractFullness(System.Int32)": {
+          "Lines": {
+            "59": 3,
+            "60": 3,
+            "61": 2,
+            "62": 2,
+            "63": 2,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "67": 3
+          },
+          "Branches": [
+            {
+              "Line": 60,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 60,
+              "Offset": 22,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::Feed(Beast_Blitz.Domain.Models.Food)": {
+          "Lines": {
+            "70": 2,
+            "71": 2,
+            "72": 1,
+            "73": 1,
+            "74": 1,
+            "75": 1,
+            "76": 1,
+            "77": 1,
+            "78": 2,
+            "79": 2,
+            "80": 2,
+            "81": 2,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 2,
+            "86": 2
+          },
+          "Branches": [
+            {
+              "Line": 71,
+              "Offset": 27,
+              "EndOffset": 29,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 71,
+              "Offset": 27,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 94,
+              "EndOffset": 96,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 78,
+              "Offset": 94,
+              "EndOffset": 120,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::DailyDecrease(Beast_Blitz.Domain.Models.Hat)": {
+          "Lines": {
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::DailyDecrease()": {
+          "Lines": {
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::Clean()": {
+          "Lines": {
+            "108": 1,
+            "109": 1,
+            "110": 1,
+            "111": 1,
+            "112": 1,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "117": 1
+          },
+          "Branches": [
+            {
+              "Line": 109,
+              "Offset": 27,
+              "EndOffset": 29,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 109,
+              "Offset": 27,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.CareStats::.ctor()": {
+          "Lines": {
+            "17": 10,
+            "18": 10,
+            "19": 10,
+            "20": 10,
+            "21": 10,
+            "22": 10,
+            "23": 10,
+            "26": 10,
+            "27": 10,
+            "28": 10,
+            "29": 10,
+            "30": 10,
+            "31": 10,
+            "32": 10,
+            "33": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Element.cs": {
+      "Beast_Blitz.Domain.Models.Element": {
+        "System.Int32 Beast_Blitz.Domain.Models.Element::get_ElementID()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Models.Element::get_Name()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Element::.ctor(System.String)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Element::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Enemy.cs": {
+      "Beast_Blitz.Domain.Models.Enemy": {
+        "System.Int32 Beast_Blitz.Domain.Models.Enemy::get_CoinReward()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Enemy::.ctor(Beast_Blitz.Domain.Models.Species,System.String,System.Int32)": {
+          "Lines": {
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Enemy::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Food.cs": {
+      "Beast_Blitz.Domain.Models.Food": {
+        "System.Int32 Beast_Blitz.Domain.Models.Food::get_FullnessAmt()": {
+          "Lines": {
+            "8": 6
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Food::.ctor(System.String,System.Int32,System.Int32)": {
+          "Lines": {
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Food::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Hat.cs": {
+      "Beast_Blitz.Domain.Models.Hat": {
+        "System.Int32 Beast_Blitz.Domain.Models.Hat::get_Happiness()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Hat::.ctor(System.String,System.Int32,System.String,System.Int32)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Hat::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Home.cs": {
+      "Beast_Blitz.Domain.Models.Home": {
+        "System.Void Beast_Blitz.Domain.Models.Home::Feed(Beast_Blitz.Domain.Models.Pet,Beast_Blitz.Domain.Models.Food)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Home::Clean(Beast_Blitz.Domain.Models.Pet)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Home::.ctor(System.String)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Home::.ctor()": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Index.cs": {
+      "Beast_Blitz.Domain.Models.Index": {
+        "System.Void Beast_Blitz.Domain.Models.Index::LogIn()": {
+          "Lines": {
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Index::Register(System.String,System.String,System.String)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Index::.ctor(System.String)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Pet.cs": {
+      "Beast_Blitz.Domain.Models.Pet": {
+        "System.String Beast_Blitz.Domain.Models.Pet::get_Name()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Beast_Blitz.Domain.Models.Pet::get_Birthday()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.CareStats Beast_Blitz.Domain.Models.Pet::get_CareStats()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Pet::.ctor(Beast_Blitz.Domain.Models.Species,System.String,System.String)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Pet::.ctor()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Player.cs": {
+      "Beast_Blitz.Domain.Models.Player": {
+        "System.Collections.Generic.List`1<Beast_Blitz.Domain.Models.Pet> Beast_Blitz.Domain.Models.Player::get_Pets()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Beast_Blitz.Domain.Abstracts.Item> Beast_Blitz.Domain.Models.Player::get_Inventory()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.Player::get_Coins()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Player::AddNewPet(Beast_Blitz.Domain.Models.Species,System.String,System.String)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 22,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 22,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.Player::RemovePet(Beast_Blitz.Domain.Models.Pet)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 42,
+              "Offset": 17,
+              "EndOffset": 19,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 17,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.Player::.ctor(System.String,System.String,System.String)": {
+          "Lines": {
+            "14": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Player::.ctor()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Potion.cs": {
+      "Beast_Blitz.Domain.Models.Potion": {
+        "System.String Beast_Blitz.Domain.Models.Potion::get_Stat()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Models.Potion::get_Amt()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Potion::.ctor(System.String,System.Int32,System.String,System.Int32)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Potion::.ctor()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Shop.cs": {
+      "Beast_Blitz.Domain.Models.Shop": {
+        "System.Collections.Generic.List`1<Beast_Blitz.Domain.Abstracts.Item> Beast_Blitz.Domain.Models.Shop::get_Inventory()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Beast_Blitz.Domain.Models.Shop::Buy(Beast_Blitz.Domain.Models.Player,Beast_Blitz.Domain.Abstracts.Item)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 20,
+              "EndOffset": 60,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Beast_Blitz.Domain.Models.Shop::Sell(Beast_Blitz.Domain.Models.Player,Beast_Blitz.Domain.Abstracts.Item)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "55": 0
+          },
+          "Branches": [
+            {
+              "Line": 46,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 15,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Beast_Blitz.Domain.Models.Shop::.ctor(System.String)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Shop::.ctor(System.String,System.Collections.Generic.List`1<Beast_Blitz.Domain.Abstracts.Item>)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Shop::.ctor()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Species.cs": {
+      "Beast_Blitz.Domain.Models.Species": {
+        "System.Int32 Beast_Blitz.Domain.Models.Species::get_SpeciesID()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Models.Species::get_Name()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.Element Beast_Blitz.Domain.Models.Species::get_Element()": {
+          "Lines": {
+            "9": 1
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.BattleStats Beast_Blitz.Domain.Models.Species::get_BaseStats()": {
+          "Lines": {
+            "10": 4
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Models.Species::get_Image()": {
+          "Lines": {
+            "11": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Species::.ctor(System.String,Beast_Blitz.Domain.Models.Element,Beast_Blitz.Domain.Models.BattleStats,System.String)": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Species::.ctor()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Models\\Treat.cs": {
+      "Beast_Blitz.Domain.Models.Treat": {
+        "System.Int32 Beast_Blitz.Domain.Models.Treat::get_HappinessAmt()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Treat::.ctor(System.String,System.Int32,System.Int32)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Models.Treat::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Abstracts\\Accessory.cs": {
+      "Beast_Blitz.Domain.Abstracts.Accessory": {
+        "System.String Beast_Blitz.Domain.Abstracts.Accessory::get_Image()": {
+          "Lines": {
+            "8": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Accessory::.ctor(System.String,System.Int32,System.String)": {
+          "Lines": {
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Accessory::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Abstracts\\Item.cs": {
+      "Beast_Blitz.Domain.Abstracts.Item": {
+        "System.Int32 Beast_Blitz.Domain.Abstracts.Item::get_ItemID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.Item::get_Name()": {
+          "Lines": {
+            "10": 8
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Abstracts.Item::get_BuyCost()": {
+          "Lines": {
+            "11": 13
+          },
+          "Branches": []
+        },
+        "System.Int32 Beast_Blitz.Domain.Abstracts.Item::get_SellCost()": {
+          "Lines": {
+            "12": 6
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Item::.ctor(System.String,System.Int32)": {
+          "Lines": {
+            "15": 6,
+            "18": 6,
+            "19": 6,
+            "20": 6,
+            "21": 6,
+            "22": 6,
+            "23": 6
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Item::.ctor()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Abstracts\\Location.cs": {
+      "Beast_Blitz.Domain.Abstracts.Location": {
+        "System.Int32 Beast_Blitz.Domain.Abstracts.Location::get_LocationID()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.Location::get_Name()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Location::.ctor(System.String)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Location::.ctor()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Abstracts\\Monster.cs": {
+      "Beast_Blitz.Domain.Abstracts.Monster": {
+        "System.Int32 Beast_Blitz.Domain.Abstracts.Monster::get_MonsterID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.Species Beast_Blitz.Domain.Abstracts.Monster::get_Species()": {
+          "Lines": {
+            "10": 3
+          },
+          "Branches": []
+        },
+        "Beast_Blitz.Domain.Models.BattleStats Beast_Blitz.Domain.Abstracts.Monster::get_BattleStats()": {
+          "Lines": {
+            "11": 3
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.Monster::get_Color()": {
+          "Lines": {
+            "12": 4
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Monster::.ctor(Beast_Blitz.Domain.Models.Species,System.String)": {
+          "Lines": {
+            "15": 3,
+            "16": 3,
+            "17": 3,
+            "18": 3,
+            "19": 3,
+            "20": 3
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.Monster::.ctor()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\revature\\ProjectTwo\\Beast_Blitz\\Beast_Blitz.Domain\\Abstracts\\User.cs": {
+      "Beast_Blitz.Domain.Abstracts.User": {
+        "System.Int32 Beast_Blitz.Domain.Abstracts.User::get_UserID()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.User::get_Email()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.User::get_Username()": {
+          "Lines": {
+            "9": 2
+          },
+          "Branches": []
+        },
+        "System.String Beast_Blitz.Domain.Abstracts.User::get_Password()": {
+          "Lines": {
+            "10": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.User::.ctor(System.String,System.String,System.String)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "18": 1
+          },
+          "Branches": []
+        },
+        "System.Void Beast_Blitz.Domain.Abstracts.User::.ctor()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
