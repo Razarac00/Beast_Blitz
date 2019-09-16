@@ -56,8 +56,18 @@ body {
   min-height:800px;
 }
 
-.container .col-6, .container .col-3{
+.maincol {
   min-height:800px;
+}
+
+.arrow {
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  font-size: 26px;
 }
 
 .container h1 {

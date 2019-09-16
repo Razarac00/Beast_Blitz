@@ -17,8 +17,17 @@ namespace Beast_Blitz.Client.Controllers
             return View();
         }
 
-        public IActionResult Pet()
+        public IActionResult Team()
         {
+            return View();
+        }
+
+        public IActionResult Pet(int petId)
+        {
+            //if User.Pets.Where(p => p.PetId == petId) == null
+            //return RedirectToAction("Team");
+            
+            //fetch pet by pet id and pass to view
             return View();
         }
 
@@ -34,6 +43,7 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Register(Player newPlayer)
         {
             if(ModelState.IsValid)
