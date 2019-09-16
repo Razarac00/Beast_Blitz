@@ -6,3 +6,14 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+$("#petcreator img").on("click", function(){
+  $("#petwindow image").attr("xlink:href", $(this).attr("src"));
+  $("#petwindow h5").html($(this).attr("species_name"));
+  $("#petwindow p").html($(this).attr("species_desc"));
+});
+
+
+$(document).on("change", "input", function(){
+  $("#petwindow feFlood").attr("flood-color", document.getElementById("colorpicker").value);
+})
