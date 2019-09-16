@@ -9,8 +9,8 @@ namespace Beast_Blitz.Domain.Abstracts
     {
         // DATA
         public int ItemID { get; set; }
-        public List<User> Users { get; set; }
-        public List<Shop> Shops { get; set; }
+        public List<UserItems> UserItems { get; set; }
+        public List<ShopItems> ShopItems { get; set; }
         // Properties
         [Required(ErrorMessage = "Username is required")]
         [MaxLength(50)]
