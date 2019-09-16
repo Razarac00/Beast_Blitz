@@ -10,14 +10,14 @@ namespace Beast_Blitz.Domain.Models
         }
 
         // Methods
-        public void LogIn()
+        public User LogIn(User user)
         {
+          return user;
         }
 
-        public void Register(string email, string username, string password)
+        public Player Register(string email, string username, string password)
         {
-          //save to db
-          Player NewPlayer = new Player(email, username, password);
+          return new Player(email, username, password);
         }
     }
 }
