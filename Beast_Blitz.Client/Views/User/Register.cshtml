@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Register today!"; 
+}
+
+@model Beast_Blitz.Domain.Models.Player
+
+<form asp-action="Register" asp-controller="User" method="post">
+    <table class="table">
+        <tr>
+            <td><label asp-for="Username"></label></td>
+            <td><input type="text" class="form-control" asp-for="Username"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input type="text" class="form-control" asp-for="Email"></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input type="password" class="form-control" asp-for="Password"></td>
+        </tr>
+
+        @Html.Partial("_PetCreatorPartial")
+        @Html.AntiForgeryToken()
+    </table>
+</form>

@@ -42,6 +42,7 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Register(Player newPlayer)
         {
             if(ModelState.IsValid)
