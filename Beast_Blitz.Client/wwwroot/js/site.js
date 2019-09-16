@@ -11,8 +11,9 @@ $("#petcreator img").on("click", function(){
   $("#petwindow image").attr("xlink:href", $(this).attr("src"));
   $("#petwindow h5").html($(this).attr("species_name"));
   $("#petwindow p").html($(this).attr("species_desc"));
+  $("#speciesname").attr("value", $(this).attr("species_name"));
+  $("#petwindow span").html($(this).attr("species_stats"));
 });
-
 
 $(document).on("change", "input", function(){
   $("#petwindow feFlood").attr("flood-color", document.getElementById("colorpicker").value);
