@@ -29,10 +29,11 @@ namespace Beast_Blitz.Domain.Abstracts
         readonly double SELL_PENALTY = .25; 
 
         //Constructor
-        protected Item(string name, int basecost)
+        protected Item(string name, int basecost, string img)
         {
           Name = name; 
           BuyCost = basecost;
+          Image = img;
         }
 
         protected Item()
