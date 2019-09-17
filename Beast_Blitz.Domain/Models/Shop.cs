@@ -8,10 +8,12 @@ namespace Beast_Blitz.Domain.Models
     {
         // Backing Field
         private List<Item> inventory = new List<Item>();
+        private List<ShopItem> shopItems = new List<ShopItem>();
+
         // Properties
         [NotMapped]
         public List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
-        public List<ShopItem> ShopItems { get; set; }
+        public List<ShopItem> ShopItems { get => shopItems; set => shopItems = value; }
 
         // Constructors
         public Shop(string name) : base(name)

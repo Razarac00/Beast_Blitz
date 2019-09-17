@@ -6,12 +6,16 @@ namespace Beast_Blitz.Domain.Models
 {
   public class Player : User
   {
+
+    // Backing Fields
+    private List<UserItem> userItems = new List<UserItem>();
+
     // Properties 
     public List<Pet> Pets { get; set; }
 
     [NotMapped]
     public List<Item> Inventory { get; set; }
-    public List<UserItem> UserItems { get; set; }
+    public List<UserItem> UserItems { get => userItems; set => userItems = value; }
     public int Coins { get; set; }
 
     // Constants
