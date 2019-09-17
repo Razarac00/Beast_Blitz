@@ -19,6 +19,7 @@ namespace Beast_Blitz.Client.Controllers
         {
             if(HttpContext.Session.GetInt32("UserId") == null)
                 return RedirectToAction("Register");
+            ViewBag.UserLevel = 2;
 
             var thisUser = _db.Players
                 .Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
@@ -32,6 +33,7 @@ namespace Beast_Blitz.Client.Controllers
         {
             if(HttpContext.Session.GetInt32("UserId") == null)
                 return RedirectToAction("Register");
+            ViewBag.UserLevel = 2;
 
             var thisUser = _db.Players.Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
                 .Include(p => p.Pets)
@@ -51,6 +53,7 @@ namespace Beast_Blitz.Client.Controllers
                 .FirstOrDefault();
             if(thisPet == null)
                 return RedirectToAction("Team");
+            ViewBag.UserLevel = 2;
             return View(thisPet);
         }
 
@@ -58,12 +61,15 @@ namespace Beast_Blitz.Client.Controllers
         {
             if(HttpContext.Session.GetInt32("UserId") == null)
                 return RedirectToAction("Register");
+            ViewBag.UserLevel = 2;
             return View();
         }
 
         [HttpGet]
         public IActionResult Register()
         {
+            if(HttpContext.Session.GetInt32("UserId") != null)
+                return RedirectToAction("Index", "Home");
             return View();
         }
 
