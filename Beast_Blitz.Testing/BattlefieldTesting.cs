@@ -28,5 +28,36 @@ namespace Beast_Blitz.Testing
           //Then
           Assert.True(expected == actual);
         }
+
+        [Fact]
+        public void CanBeConstructedEmpty()
+        {
+          //Given
+          Battlefield bf = new Battlefield();
+          
+          //When
+          string expected = "Battlefield";
+          string actual = bf.Name;
+          
+          //Then
+          Assert.True(expected == actual);
+        }
+
+        [Fact]
+        public void BattleWorks()
+        {
+          //To Do
+          //Given
+          Battlefield bf = new Battlefield();
+          Species species = new Species();
+          Pet pet = new Pet(species, "testColor", "testName");
+          Enemy enemy = new Enemy();
+
+          //When
+          bool battle = bf.Battle(pet, enemy);
+          
+          //Then
+          Assert.True(battle);
+        }
     }
 }
