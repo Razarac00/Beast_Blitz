@@ -12,7 +12,7 @@ namespace Beast_Blitz.Domain.Models
 
         // Properties
         [NotMapped]
-        public List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
+        public List<Item> Inventory { get => buildInventory(); private set => inventory = resetInventory(value); }
         public List<ShopItem> ShopItems { get => shopItems; set => shopItems = value; }
 
         // Constructors
@@ -75,7 +75,7 @@ namespace Beast_Blitz.Domain.Models
 
             return false;
         }
-        
+
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
