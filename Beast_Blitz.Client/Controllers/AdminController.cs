@@ -41,27 +41,30 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddNewSpecies(Species species, IFormFile file)
+        public async Task<IActionResult> AddNewSpecies(Species species, IFormFile imageSprite, int element)
         {
-            if (file == null | file.Length == 0)  
+            if (imageSprite == null | imageSprite.Length == 0) 
             { 
                 ViewBag.Error = "An item needs an image sprite!";
                 return View();
             }
 
             var path = Path.Combine(  
-                Directory.GetCurrentDirectory(), "wwwroot/img/",   
-                file.FileName);
-                
+                Directory.GetCurrentDirectory(), "wwwroot/img/monster/",   
+                imageSprite.FileName);
+            
             using (var stream = new FileStream(path, FileMode.Create))  
             {  
-                await file.CopyToAsync(stream);
+                await imageSprite.CopyToAsync(stream);
             }
+
+            species.Image = imageSprite.FileName;
+            species.Element = _db.Elements.Single(e => e.ElementID == element);
             
             _db.Species.Add(species);
             _db.SaveChanges();
 
-            ViewData["Confirmation"] = $"New species '{species.Name}' added successfully.";
+            TempData["Confirmation"] = $"New species '{species.Name}' added successfully.";
 
             return RedirectToAction("Dashboard");
         }
@@ -80,7 +83,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.Elements.Add(element);
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"New element '{element.Name}' added successfully.";
+                TempData["Confirmation"] = $"New element '{element.Name}' added successfully.";
 
                 return RedirectToAction("Dashboard");
             }
@@ -102,7 +105,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.Shops.Add(shop);
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"New shop '{shop.Name}' added successfully.";
+                TempData["Confirmation"] = $"New shop '{shop.Name}' added successfully.";
 
                 return RedirectToAction("Dashboard");
             }
@@ -163,7 +166,7 @@ namespace Beast_Blitz.Client.Controllers
                     break;
             }
                 
-            ViewData["Confirmation"] = $"New item '{name}' added successfully.";
+            TempData["Confirmation"] = $"New item '{name}' added successfully.";
             
             return View();
         }
@@ -184,7 +187,7 @@ namespace Beast_Blitz.Client.Controllers
 
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"Item '{item.Name}' successfully added to shop {shop.Name}.";
+                TempData["Confirmation"] = $"Item '{item.Name}' successfully added to shop {shop.Name}.";
 
                 return RedirectToAction("Dashboard");
             }
@@ -206,7 +209,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.Locations.Add(location);
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"New location '{location.Name}' added successfully.";
+                TempData["Confirmation"] = $"New location '{location.Name}' added successfully.";
 
                 return RedirectToAction("Dashboard");
             }
@@ -228,7 +231,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.Enemies.Add(enemy);
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"New enemy {enemy.Species.Name} added successfully.";
+                TempData["Confirmation"] = $"New enemy {enemy.Species.Name} added successfully.";
 
                 return RedirectToAction("Dashboard");
             }
@@ -250,7 +253,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.Admins.Add(newAdmin);
                 _db.SaveChanges();
 
-                ViewData["Confirmation"] = $"Admin '{newAdmin.Username}' added successfully.";
+                TempData["Confirmation"] = $"Admin '{newAdmin.Username}' added successfully.";
                 return RedirectToAction("Dashboard");
             }
 

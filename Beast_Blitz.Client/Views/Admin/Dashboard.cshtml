@@ -2,15 +2,15 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
-@if(ViewData["Confirmation"] != null)
+@if(TempData["Confirmation"] != null)
 {
 <div class="alert alert-success fade in alert-dismissible show">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true" class="align-top" style="font-size:20px">×</span>
     </button>
 
-    @ViewData["Confirmation"]
-    
+    @TempData["Confirmation"]
+
 </div>
    
 }
