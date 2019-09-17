@@ -8,7 +8,6 @@ namespace Beast_Blitz.Domain.Models
     public Admin(string email, string username, string password) : base(email, username, password)
     {
     }
-
     public Admin() 
     {
     }
@@ -49,11 +48,11 @@ namespace Beast_Blitz.Domain.Models
       return new Treat(name, basecost, happinessamt, img);
     }
 
-    public Shop AddToShop(Item item, Shop shop)
-    {
-      shop.Inventory.Add(item);
-      return shop;
-    }
+    // public Shop AddToShop(Item item, Shop shop)
+    // {
+    //   shop.Inventory.Add(item);
+    //   return shop;
+    // }
 
     public Admin AddNewAdmin(string email, string username, string password)
     {
