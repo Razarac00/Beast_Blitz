@@ -1,4 +1,11 @@
-<form asp-action="Login" asp-controller="User" method="post">
+@if(ViewBag.UserLevel == 2)
+{
+    <form asp-action="Logout" asp-controller="User" method="post" class="float-right">
+        <button type="submit" class="btn btn-dark">Logout</button>
+    </form>
+}
+else{
+    <form asp-action="Login" asp-controller="User" method="post">
     <table class="login">
         <tr>
             <td><label for="Username">Username</label></td>
@@ -18,3 +25,4 @@
         </tr>
     </table>
 </form>
+}
