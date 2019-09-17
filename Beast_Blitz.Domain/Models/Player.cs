@@ -10,8 +10,9 @@ namespace Beast_Blitz.Domain.Models
     // Backing Fields
     private List<UserItem> userItems = new List<UserItem>();
     private List<Item> inventory = new List<Item>();
+    private List<Pet> pets = new List<Pet>();
     // Properties 
-    public List<Pet> Pets { get; set; }
+    public List<Pet> Pets { get => pets; set => pets = value; }
 
     [NotMapped]
     public List<Item> Inventory { get => buildInventory(); private set => inventory = resetInventory(value); }
@@ -24,8 +25,6 @@ namespace Beast_Blitz.Domain.Models
     // Constructor
     public Player(string email, string username, string password) : base(email, username, password)
     {
-      Pets = new List<Pet>();
-      Inventory = new List<Item>();
       Coins = 0;
     }
 
