@@ -1,1 +1,30 @@
-@model List<Beast_Blitz.Domain.Models.Shop>
+<table class="table my-3">
+    <caption><h3>Shops</h3></caption>
+    <tr>
+        <th>LocationID</th>
+        <th>ShopItems</th>
+        <th>Name</th>
+        <th>Element</th>
+        <th>Base Stats</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Shops)
+    {
+    <tr>
+        <td>item.</td>
+        <td><img src="/img/location/@item.Image" alt="item.Name"></td>
+        <td>item.Name</td>
+        <td>item.Element.Name</td>
+        <td></td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    }
+    <tr>
+        <td>1</td>
+        <td>item.Name</td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    <tr>
+        <td colspan="3"><a asp-action="AddNewShop" asp-controller="Admin" class="btn">Add New Shop...</a></td>
+    </tr>
+</table>

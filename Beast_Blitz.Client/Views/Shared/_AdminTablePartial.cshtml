@@ -1,3 +1,32 @@
-@model List<Beast_Blitz.Domain.Models.Admin>
-
-    
+<table class="table my-3">
+    <caption><h3>Administrators</h3></caption>
+    <tr>
+        <th>UserID</th>
+        <th>Username</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Admins)
+    {
+    <tr>
+        <td>@item.UserID</td>
+        <td>@item.Username</td>
+        <td>    
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove as Admin </button>
+            </form>
+        </td>
+    </tr>
+    }
+    <tr>
+        <td>item.UserID</td>
+        <td>item.Username</td>
+        <td>    
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove as Admin </button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><a asp-action="AddNewAdmin" asp-controller="Admin" class="btn">Add New Admin...</a></td>
+    </tr>
+</table>

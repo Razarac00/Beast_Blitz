@@ -1,2 +1,50 @@
-@model List<Beast_Blitz.Domain.Models.Enemy>
-
+<table class="table my-3">
+    <caption><h3>Enemies</h3></caption>
+    <tr>
+        <th>MonsterID</th>
+        <th>Name</th>
+        <th>Coin Reward</th>
+        <th>Color</th>
+        <th>Species</th>
+        <th>Battle Stats</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Enemies)
+    {
+    <tr>
+        <td>@item.MonsterID</td>
+        <td>@item.Species.Name</td>
+        <td>@item.CoinReward</td>
+        <td>@item.Color</td>
+        <td>@item.Species.Name</td>
+        <td></td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    }
+    <tr>
+        <td>1</td>
+        <td>item.Name</td>
+        <td>item.CoinReward</td>
+        <td>item.Color</td>
+        <td>item.Species</td>
+        <td>item.BattleStats</td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><a asp-action="AddNewEnemy" asp-controller="Admin" class="btn">Add New Enemy...</a></td>
+    </tr>
+</table>

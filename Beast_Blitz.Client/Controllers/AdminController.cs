@@ -18,6 +18,18 @@ namespace Beast_Blitz.Client.Controllers
         Beast_Blitz_DbContext _db = new Beast_Blitz_DbContext();
         public IActionResult Dashboard()
         {
+            ViewBag.Admins = _db.Admins.ToList();
+            ViewBag.Armors = _db.Armors.ToList();
+            ViewBag.Bosses = _db.Bosses.ToList();
+            ViewBag.Elements = _db.Elements.ToList();
+            ViewBag.Enemies = _db.Enemies.ToList();
+            ViewBag.Foods = _db.Foods.ToList();
+            ViewBag.Hats = _db.Hats.ToList();
+            ViewBag.Potions = _db.Potions.ToList();
+            ViewBag.Shops = _db.Shops.ToList();
+            ViewBag.Species = _db.Species.ToList();
+            ViewBag.Treats = _db.Treats.ToList();
+            
             return View();
         }
 
