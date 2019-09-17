@@ -6,6 +6,9 @@ namespace Beast_Blitz.Domain.Models
 {
     public class Pet : Monster
     {
+        // Backing Fields
+        private DateTime birthday = DateTime.Now.Date;
+        private CareStats careStats = new CareStats();
         // Properties
         [Required(ErrorMessage = "Name is required")]
         [MaxLength(50)]
@@ -14,15 +17,13 @@ namespace Beast_Blitz.Domain.Models
         public string Name { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime Birthday { get; protected set; }
-        public CareStats CareStats { get; set; }
+        public DateTime Birthday { get => birthday; protected set => birthday = value; }
+        public CareStats CareStats { get => careStats; set => careStats = value; }
         
         // Constructor
         public Pet(Species species, string color, string name) : base(species, color)
         {
           Name = name;
-          Birthday = DateTime.Now.Date;
-          CareStats = new CareStats();
         }
 
         public Pet()
