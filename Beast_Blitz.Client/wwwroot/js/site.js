@@ -9,6 +9,8 @@ $(document).ready(function(){
 
 document.querySelectorAll("#petcreator img").forEach(item => {
   item.addEventListener("click", event => {
+    document.getElementById("namefield").style.display = "table-row";
+    document.getElementById("colorfield").style.display = "table-row";
     document.querySelector("#petwindow image").setAttribute("xlink:href", item.getAttribute("src"));
     document.querySelector("#petwindow h5").textContent = item.getAttribute("species_name");
     document.querySelector("#petwindow p").textContent = item.getAttribute("species_desc");
