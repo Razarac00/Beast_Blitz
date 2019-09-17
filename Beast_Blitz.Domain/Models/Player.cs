@@ -9,12 +9,12 @@ namespace Beast_Blitz.Domain.Models
 
     // Backing Fields
     private List<UserItem> userItems = new List<UserItem>();
-
+    private List<Item> inventory = new List<Item>();
     // Properties 
     public List<Pet> Pets { get; set; }
 
     [NotMapped]
-    public List<Item> Inventory { get; set; }
+    public List<Item> Inventory { get => buildInventory(); private set => inventory = resetInventory(value); }
     public List<UserItem> UserItems { get => userItems; set => userItems = value; }
     public int Coins { get; set; }
 
@@ -34,6 +34,50 @@ namespace Beast_Blitz.Domain.Models
     }
 
     // Methods
+    private List<Item> buildInventory()
+    {
+        inventory = new List<Item>();
+
+        foreach (var userItem in UserItems)
+        {
+            inventory.Add(userItem.Item);
+        }
+        return inventory;
+    }
+
+    private List<Item> resetInventory(List<Item> value)
+    {
+        UserItems = new List<UserItem>();
+
+        foreach (var item in value)
+        {
+            var ui = new UserItem();
+            ui.Item = item;
+            ui.UserID = this.UserID;
+            ui.Player = this;
+            UserItems.Add(ui);
+        }
+
+        return value;
+    }
+    public void AddToInventory(Item item)
+    {
+        var result = new UserItem();
+        result.Item = item;
+        result.Player = this;
+        result.UserID = this.UserID;
+        UserItems.Add(result);
+    }
+
+    public bool RemoveFromInventory(Item item)
+    {
+        if (Inventory.Contains(item))
+        {
+            return 1 == UserItems.RemoveAll(si => si.Item == item);
+        }
+
+        return false;
+    }
     public void AddNewPet(Species species, string color, string name)
     {
       if (Pets.Count < MAX_PETS)

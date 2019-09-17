@@ -82,7 +82,7 @@ namespace Beast_Blitz.Domain.Models
           if (Inventory.Contains(item) && player.Coins >= item.BuyCost)
           {
             player.Coins = player.Coins - item.BuyCost;
-            player.Inventory.Add(item);
+            player.AddToInventory(item);
             return true;
           } else
           {
@@ -95,7 +95,7 @@ namespace Beast_Blitz.Domain.Models
         {
           if (player.Inventory.Contains(item))
           {
-            player.Inventory.Remove(item);
+            player.RemoveFromInventory(item);
             player.Coins = player.Coins + item.SellCost();
             return true;
           } else 

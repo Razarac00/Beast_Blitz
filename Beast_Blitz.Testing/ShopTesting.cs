@@ -97,7 +97,7 @@ namespace Beast_Blitz.Testing
           Shop shop = new Shop();
           Player player = new Player("testEmail", "testUsername", "testPassword");
           Armor testArmor = new Armor("testArmor", 20, "testArmor", 4);
-          player.Inventory.Add(testArmor);
+          player.AddToInventory(testArmor);
           shop.Sell(player, testArmor);
 
           //When
