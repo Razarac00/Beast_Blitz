@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Add a species";
+}
+@model Beast_Blitz.Domain.Models.Species
+
+<h3>Add New Species</h3>
+<form asp-action="AddNewSpecies" asp-controller="Admin" method="post" enctype="multipart/form-data">
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" class="form-control">
+
+    <label for="element">Element</label>
+    <select name="element" class="form-control">
+    @foreach(var element in ViewBag.Elements)
+    {
+        <option value="@element.ElementID">@element.Name</option>
+    }
+    </select>
+
+    @Html.Partial("_BaseStatsPartial")
+
+    <label for="image">Species Sprite</label>
+    <input type="file" name="imageSprite" class="form-control">
+
+    <button class="btn btn-dark my-3" type="submit">Add Species</button>
+</form>

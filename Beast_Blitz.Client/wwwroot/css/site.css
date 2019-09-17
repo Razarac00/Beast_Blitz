@@ -113,6 +113,7 @@ body {
 }
 
 header {
+  color:white;
   padding:20px;
   border-bottom: 1px solid #470e3f7e;
   margin-bottom:15px;
@@ -123,7 +124,7 @@ header {
 
 #title {
   float:left;
-  color:black;
+  color:white;
 }
 
 #profile, #profile .col-12 {
@@ -158,7 +159,7 @@ header {
 }
 
 header a:hover {
-  color:black;
+  color:#470E3F;
   text-decoration: none;
 }
 
@@ -201,4 +202,18 @@ header a:hover {
 #petcreator img:hover {
   border: 2px solid #df9b6d;
   cursor: pointer;
+}
+
+svg {
+  display:block;
+  margin:auto;
+}
+
+.shop {
+  border: 4px solid rgba(90, 90, 90, 0.445);
+  border-radius: 5px;
+}
+
+#admincontainer .table td:first-child {
+  text-align: left;
 }

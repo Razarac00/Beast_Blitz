@@ -1,0 +1,28 @@
+@model Beast_Blitz.Domain.Models.BattleStats
+
+<h5 class="mt-3">Base Stats</h5>
+<div class="row">
+    <div class="col-4">
+        <label asp-for="Health"></label>
+        <input type="number" asp-for="Health" class="form-control">
+    </div>
+    <div class="col-4">
+        <label asp-for="Attack"></label>
+        <input type="number" asp-for="Attack" class="form-control">
+    </div>
+    <div class="col-4">
+        <label asp-for="Defense"></label>
+        <input type="number" asp-for="Defense" class="form-control">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <label asp-for="Speed"></label>
+        <input type="number" asp-for="Speed" class="form-control">
+    </div>
+    <div class="col-6">
+        <label asp-for="Magic"></label>
+        <input type="number" asp-for="Magic" class="form-control">
+    </div>
+</div>

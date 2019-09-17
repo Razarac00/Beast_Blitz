@@ -1,0 +1,47 @@
+<h5>Armors</h5>
+<table class="table my-3">
+    <tr>
+        <th>ItemID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Defense</th>
+        <th>Buy Cost</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Armors)
+    {
+    <tr>
+        <td>@item.ItemID</td>
+        <td><img src="/img/item/item.Image" alt="@item.Name" class="img-fluid"></td>
+        <td>@item.Name</td>
+        <td>+@item.Defense</td>
+        <td>@item.BuyCost G</td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    }
+    <tr>
+        <td>item.ItemID</td>
+        <td><img src="/img/item/potion.png" alt="potion.png" class="img-fluid"></td>
+        <td>item.Name</td>
+        <td>item.Defense</td>
+        <td>item.BuyCost</td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6"><a asp-action="AddNewArmor" asp-controller="Admin" class="btn btn-dark">Add New Armor...</a></td>
+    </tr>
+</table>

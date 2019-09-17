@@ -1,0 +1,35 @@
+<h5>Shops</h5>
+<table class="table my-3">
+    <tr>
+        <th>LocationID</th>
+        <th>Name</th>
+        <th>ShopItems</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Shops)
+    {
+    <tr>
+        <td>item.</td>
+        <td>item.Name</td>
+        <td>items</td>
+        <td></td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    }
+    <tr>
+        <td>1</td>
+        <td>Name</td>
+        <td>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    <tr>
+        <td colspan="6"><a asp-action="AddNewShop" asp-controller="Admin" class="btn btn-dark">Add New Shop...</a></td>
+    </tr>
+</table>

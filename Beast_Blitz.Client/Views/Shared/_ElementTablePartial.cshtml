@@ -1,0 +1,38 @@
+<h5>Elements</h5>
+<table class="table my-3">
+    <tr>
+        <th>ElementID</th>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Elements)
+    {
+    <tr>
+        <td>@item.ElementID</td>
+        <td>@item.Name</td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    }
+    <tr>
+        <td>item.ElementID</td>
+        <td>item.Name</td>
+        <td>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Edit</button>
+            </form>
+            <form action="" method="post">
+                <button type="submit" class="btn btn-link" href="">Remove</button>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><a asp-action="AddNewElement" asp-controller="Admin" class="btn btn-dark">Add New Element...</a></td>
+    </tr>
+</table>

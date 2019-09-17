@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+@if(TempData["Confirmation"] != null)
+{
+<div class="alert alert-success fade in alert-dismissible show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="align-top" style="font-size:20px">×</span>
+    </button>
+
+    @TempData["Confirmation"]
+
+</div>
+   
+}
+
+<h3>Users</h3>
+@Html.Partial("_AdminTablePartial")
+
+<h3>Monsters</h3>
+@Html.Partial("_ElementTablePartial")
+@Html.Partial("_SpeciesTablePartial")
+@Html.Partial("_EnemyTablePartial")
+
+<h3>Items</h3>
+@Html.Partial("_ArmorTablePartial")
+@Html.Partial("_ShopTablePartial")
+

@@ -1,0 +1,33 @@
+<h5>Species</h5>
+<table class="table my-3">
+    <tr>
+        <th>SpeciesID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Element</th>
+        <th>Base Stats</th>
+        <th>Action</th>
+    </tr>
+    @foreach(var item in ViewBag.Species)
+    {
+    <tr>
+        <td>@item.SpeciesID</td>
+        <td><img src="/img/monster/@item.Image" alt="@item.Name" class="img-fluid"></td>
+        <td>@item.Name</td>
+        <td>@item.Element.Name</td>
+        <td></td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    }
+    <tr>
+        <td>1</td>
+        <td><img src="/img/monster/slime.gif" alt="item.Name" class="img-fluid"></td>
+        <td>item.Name</td>
+        <td>elementName</td>
+        <td>base stats</td>
+        <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
+    </tr>
+    <tr>
+        <td colspan="6"><a asp-action="AddNewSpecies" asp-controller="Admin" class="btn btn-dark">Add New Species...</a></td>
+    </tr>
+</table>
