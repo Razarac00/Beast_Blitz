@@ -213,6 +213,17 @@ svg {
   border: 4px solid rgba(90, 90, 90, 0.445);
   border-radius: 5px;
 }
+.shop:hover {
+  border: 4px solid #AF1b3F;
+}
+
+.shopcontainer a{
+  text-decoration: none;
+  color:black;
+}
+.shopcontainer a:hover{
+  color:black;
+}
 
 #admincontainer .table td:first-child {
   text-align: left;
@@ -222,3 +233,4 @@ form span {
   display:block;
   color:red;
 }
+
