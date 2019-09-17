@@ -8,7 +8,7 @@ namespace Beast_Blitz.Domain.Models
         public int HappinessAmt { get; set; }
         
         // Constructor
-        public Treat(string name, int basecost, int happinessamt) : base(name, basecost)
+        public Treat(string name, int basecost, int happinessamt, string img) : base(name, basecost, img)
         {
           HappinessAmt = happinessamt;
         }

@@ -9,7 +9,7 @@ namespace Beast_Blitz.Domain.Models
         public int Amt { get; set; }
 
         // Constructor
-        public Potion(string name, int basecost, string stat, int amt) : base(name, basecost)
+        public Potion(string name, int basecost, string img, string stat, int amt) : base(name, basecost, img)
         {
           Stat = stat;
           Amt = amt; 

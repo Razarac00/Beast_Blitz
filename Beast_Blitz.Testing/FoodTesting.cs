@@ -9,7 +9,7 @@ namespace Beast_Blitz.Testing
         public void CanBeConstructed()
         {
           //Given
-          Food food = new Food("testFood", 20, 20);
+          Food food = new Food("testFood", 20, "testImg", 20);
 
           //When
           string expected = "testFood";
