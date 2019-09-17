@@ -119,7 +119,7 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddNewItem(IFormFile file, string name, int cost, int defense, string discriminator, string potionAmount, string potionStat, int happiness)
+        public async Task<IActionResult> AddNewItem(IFormFile file, string name, int cost, int defense, string discriminator, int fullnessAmount, int potionAmount, string potionStat, int happiness)
         {
             if (file == null | file.Length == 0)  
             { 
@@ -144,24 +144,24 @@ namespace Beast_Blitz.Client.Controllers
                     _db.SaveChanges();
                     break;
                 case "Food":
-                    // var newFood = new Food(name, cost, file.FileName, defense);
-                    // _db.Foods.Add(newFood);
-                    // _db.SaveChanges();
+                    var newFood = new Food(name, cost, file.FileName, fullnessAmount);
+                    _db.Foods.Add(newFood);
+                    _db.SaveChanges();
                     break;
                 case "Hat":
-                    // var newHat = new Hat(name, cost, file.FileName, happiness);
-                    // _db.Hats.Add(newHat);
-                    // _db.SaveChanges();
+                    var newHat = new Hat(name, cost, file.FileName, happiness);
+                    _db.Hats.Add(newHat);
+                    _db.SaveChanges();
                     break;
                 case "Potion":
-                    // var newPotion = new Potion(name, cost, file.FileName, potionStat, potionAmount);
-                    // _db.Potions.Add(newPotion);
-                    // _db.SaveChanges();
+                    var newPotion = new Potion(name, cost, file.FileName, potionStat, potionAmount);
+                    _db.Potions.Add(newPotion);
+                    _db.SaveChanges();
                     break;
                 case "Treat":
-                    // var newTreat = new Treat(name, cost, file.FileName, happiness);
-                    // _db.Treats.Add(newTreat);
-                    // _db.SaveChanges();
+                    var newTreat = new Treat(name, cost, happiness, file.FileName);
+                    _db.Treats.Add(newTreat);
+                    _db.SaveChanges();
                     break;
             }
                 
@@ -187,28 +187,6 @@ namespace Beast_Blitz.Client.Controllers
                 _db.SaveChanges();
 
                 TempData["Confirmation"] = $"Item '{item.Name}' successfully added to shop {shop.Name}.";
-
-                return RedirectToAction("Dashboard");
-            }
-
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult AddNewLocation()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult AddNewLocation(Location location)
-        {
-            if(ModelState.IsValid)
-            {
-                _db.Locations.Add(location);
-                _db.SaveChanges();
-
-                TempData["Confirmation"] = $"New location '{location.Name}' added successfully.";
 
                 return RedirectToAction("Dashboard");
             }
