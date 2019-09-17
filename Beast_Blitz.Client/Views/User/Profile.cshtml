@@ -1,23 +1,33 @@
+@model Beast_Blitz.Domain.Models.Player
+
 @{
     ViewData["Title"] = "_UserName's Profile";
 }
 
-<h3>_UserName's Profile</h3>
+<h3>@Model.Username's Profile</h3>
 
 <div id="profile" class="row border shadow m-2">
     <div class="col-lg-4">
         <div class="row mx-2 my-3">
             <div class="col-12 m-2 border shadow">
-                <img id="beastsprite" src="/img/monster/slime.gif" alt="Player beast" class="img-fluid pt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200">
+                <defs>
+                    <filter id="colorMask1">
+                        <feFlood flood-color="@Model.Pets[0].Color" result="flood" />
+                        <feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                    </filter>
+                </defs>
+                <image width="100%" height="100%" xlink:href="/img/monster/@Model.Pets[0].Species.Image" class="img-fluid" filter="url(#colorMask1)">
+            </svg>
                 
                 <table class="table">
                     <tr>
                         <td>Name</td>
-                        <td id="name">_PetName</td>
+                        <td id="name">@Model.Pets[0].Name</td>
                     </tr>
                     <tr>
                         <td>Birthday</td>
-                        <td id="bday">January 1, 2019</td>
+                        <td id="bday">@Model.Pets[0].Birthday</td>
                     </tr>
                 </table>
 
@@ -34,13 +44,13 @@
                 </div>
                 <div class="row my-1" id="statnum">
                     <div class="col-4" id="happynum">
-                        100/100
+                        @Model.Pets[0].CareStats.Happiness / 100
                     </div>
                     <div class="col-4" id="foodnum">
-                        100/100
+                        @Model.Pets[0].CareStats.Fullness / 100
                     </div>
                     <div class="col-4" id="cleannum">
-                        100/100
+                        @Model.Pets[0].CareStats.Cleanliness / 100
                     </div>
                 </div>
                 <div class="row text-center">

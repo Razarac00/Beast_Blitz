@@ -8,6 +8,7 @@ using Beast_Blitz.Domain.Models;
 using Microsoft.AspNetCore.Http;
 using Beast_Blitz.Domain.Abstracts;
 using Beast_Blitz.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Beast_Blitz.Client.Controllers
 {
@@ -18,23 +19,38 @@ namespace Beast_Blitz.Client.Controllers
         {
             if(HttpContext.Session.GetInt32("UserId") == null)
                 return RedirectToAction("Register");
-            return View();
+
+            var thisUser = _db.Players
+                .Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
+                .Include(p => p.Pets)
+                .ThenInclude(pe => pe.Species)
+                .First();
+            return View(thisUser);
         }
 
         public IActionResult Team()
         {
             if(HttpContext.Session.GetInt32("UserId") == null)
                 return RedirectToAction("Register");
-            return View();
+
+            var thisUser = _db.Players.Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
+                .Include(p => p.Pets)
+                .ThenInclude(pe => pe.Species)
+                .First();
+            return View(thisUser);
         }
 
         public IActionResult Pet(int petId)
         {
-            var thisPet = _db.Players.Single(u => u.UserID == HttpContext.Session.GetInt32("UserId")).Pets.FirstOrDefault(p => p.MonsterID == petId);
+            var thisUser = _db.Players
+                .Include(u => u.Pets)
+                .ThenInclude(pe => pe.Species)
+                .Single(u => u.UserID == HttpContext.Session.GetInt32("UserId"));
+            var thisPet = thisUser.Pets
+                .Where(p => p.MonsterID == petId)
+                .FirstOrDefault();
             if(thisPet == null)
                 return RedirectToAction("Team");
-            
-            //fetch pet by pet id and pass to view
             return View(thisPet);
         }
 
@@ -84,15 +100,16 @@ namespace Beast_Blitz.Client.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string thisUser)
+        public IActionResult Login(string Username, string Password)
         {
-            if(ModelState.IsValid)
+            var thisUser = _db.Users.Where(u => u.Username == Username && u.Password == Password).FirstOrDefault();
+            if(thisUser != null)
             {
-                HttpContext.Session.SetInt32("UserId", 1);
+                HttpContext.Session.SetInt32("UserId", thisUser.UserID);
                 return RedirectToAction("Index", "Home");
             }
 
-            return View();
+            return RedirectToAction("Register");
         }
 
         [HttpPost]

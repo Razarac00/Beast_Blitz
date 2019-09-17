@@ -1,3 +1,5 @@
+@model Beast_Blitz.Domain.Models.Player
+
 @{
     ViewData["Title"] = "Care For Your Team";
 }
@@ -5,19 +7,20 @@
 <h4 class="text-center my-2">Your Beasts</h4>
 
 <div class="row">
+    @foreach(var pet in Model.Pets)
+    {
     <div class="col-4">
-        <a asp-controller="User" asp-action="Pet" asp-route-petId="1">
-            <img src="/img/rat.gif" class="img-fluid">
+        <a asp-controller="User" asp-action="Pet" asp-route-petId="@pet.MonsterID">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250" height="250">
+                <defs>
+                    <filter id="colorMask1">
+                        <feFlood flood-color="@pet.Color" result="flood" />
+                        <feComposite in="SourceGraphic" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+                    </filter>
+                </defs>
+                <a asp-action="Pet" asp-controller="User" asp-route-petId="@pet.MonsterID"><image width="100%" height="100%" xlink:href="/img/monster/@pet.Species.Image" class="img-fluid" filter="url(#colorMask1)"></a>
+            </svg>
         </a>
     </div>
-    <div class="col-4">
-        <a asp-controller="User" asp-action="Pet" asp-route-petId="1">
-            <img src="/img/snake.png" class="img-fluid">
-        </a>        
-    </div>
-    <div class="col-4">
-        <a asp-controller="User" asp-action="Pet" asp-route-petId="1">
-            <img src="/img/slime.gif" class="img-fluid">            
-        </a>
-    </div>
+    }
 </div>
