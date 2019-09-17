@@ -18,5 +18,19 @@ namespace Beast_Blitz
           //Then
           Assert.True(expected == actual);
         }
+
+        [Fact]
+        public void CanBeConstructedEmpty()
+        {
+          //Given
+          Hat hat = new Hat();
+          
+          //When
+          int expected = 4;
+          int actual = hat.Happiness;
+          
+          //Then
+          Assert.True(expected == actual);
+        }
     }
 }
