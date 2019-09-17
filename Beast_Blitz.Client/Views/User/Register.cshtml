@@ -9,14 +9,19 @@
     <table class="table table-borderless">
         <tr>
             <td><label asp-for="Username"></label></td>
+            <span asp-validation-for="Username"></span>
             <td><input type="text" class="form-control" asp-for="Username"></td>
         </tr>
         <tr>
             <td><label asp-for="Email"></label></td>
+            <span asp-validation-for="Email"></span>
+
             <td><input type="text" class="form-control" asp-for="Email"></td>
         </tr>
         <tr>
             <td><label asp-for="Password"></label></td>
+            <span asp-validation-for="Password"></span>
+
             <td><input type="password" class="form-control" asp-for="Password"></td>
         </tr>
     </table>
