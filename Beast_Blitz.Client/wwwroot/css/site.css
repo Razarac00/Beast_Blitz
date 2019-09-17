@@ -217,3 +217,8 @@ svg {
 #admincontainer .table td:first-child {
   text-align: left;
 }
+
+form span {
+  display:block;
+  color:red;
+}

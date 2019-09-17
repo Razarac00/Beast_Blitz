@@ -7,7 +7,7 @@ namespace Beast_Blitz.Domain.Models
     public class Pet : Monster
     {
         // Backing Fields
-        private DateTime birthday = DateTime.Now.Date;
+        private DateTime birthday = DateTime.Now;
         private CareStats careStats = new CareStats();
         // Properties
         [Required(ErrorMessage = "Name is required")]

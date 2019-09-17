@@ -12,7 +12,7 @@ $("#petcreator img").on("click", function(){
   $("#petwindow h5").html($(this).attr("species_name"));
   $("#petwindow p").html($(this).attr("species_desc"));
   $("#speciesname").attr("value", $(this).attr("species_name"));
-  $("#petwindow span").html($(this).attr("species_stats"));
+  $("#petwindow h6").html($(this).attr("species_stats"));
 });
 
 $(document).on("change", "input", function(){
