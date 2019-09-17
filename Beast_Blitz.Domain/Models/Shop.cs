@@ -43,18 +43,21 @@ namespace Beast_Blitz.Domain.Models
 
         private List<Item> resetInventory(List<Item> value)
         {
-            ShopItems = new List<ShopItem>();
-
-            foreach (var item in value)
+            if (!(ShopItems != null && ShopItems.Count != 0))
             {
-                var si = new ShopItem();
-                si.Item = item;
-                si.LocationID = this.LocationID;
-                si.Shop = this;
-                ShopItems.Add(si);
+                ShopItems = new List<ShopItem>();
+
+                foreach (var item in value)
+                {
+                    var si = new ShopItem();
+                    si.Item = item;
+                    si.LocationID = this.LocationID;
+                    si.Shop = this;
+                    ShopItems.Add(si);
+                }
             }
 
-            return value;
+            return buildInventory();
         }
         
         public void AddToInventory(Item item)
