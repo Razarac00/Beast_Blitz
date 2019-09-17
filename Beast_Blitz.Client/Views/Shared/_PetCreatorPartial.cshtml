@@ -4,13 +4,13 @@
 
     <div class="row p-2 m-2" id="petcreator">
         <div class="col-4">
-            <img src="/img/monster/spider.gif" class="img-fluid" alt="spider" species_name="Spider" species_desc="These multi-legged companions are not very sociable, but they sure are fierce and determined. Spiders attack using magic damage." species_stats="Health: 0 Strength: 0 Defense: 0 Speed: 0 Magic: 0">
+            <img src="/img/monster/spider.gif" class="img-fluid" alt="spider" species_name="Spider" species_desc="These multi-legged companions are not very sociable, but they sure are fierce and determined. Spiders attack using magic damage." species_stats="Health: 10 Strength: 4 Defense: 5 Speed: 6 Magic: 9">
         </div>
         <div class="col-4">
-            <img src="/img/monster/rat.gif" class="img-fluid" alt="rat" species_name="Rat" species_desc="This cunning companion is quick and sociable. Rats are quick on their feet and are a little timid and quick to scare." species_stats="Health: 0 Strength: 0 Defense: 0 Speed: 0 Magic: 0">
+            <img src="/img/monster/rat.gif" class="img-fluid" alt="rat" species_name="Rat" species_desc="This cunning companion is quick and sociable. Rats are quick on their feet and are a little timid and quick to scare." species_stats="Health: 11 Strength: 5 Defense: 5 Speed: 9 Magic: 4">
         </div>
         <div class="col-4">
-            <img src="/img/monster/slime.gif" class="img-fluid" alt="slime" species_name="Slime" species_desc="This gelatinous companion goes with the flow and can fit through anything the size of its mouth. Slimes are heartier and have more stamina." species_stats="Health: 0 Strength: 0 Defense: 0 Speed: 0 Magic: 0">
+            <img src="/img/monster/slime.gif" class="img-fluid" alt="slime" species_name="Slime" species_desc="This gelatinous companion goes with the flow and can fit through anything the size of its mouth. Slimes are heartier and have more stamina." species_stats="Health: 13 Strength: 5 Defense: 6 Speed: 5 Magic: 5">
         </div>
     </div>
     <div class="row my-2 border" id="petwindow">
@@ -32,11 +32,11 @@
 
             <span asp-validation-for="Name"></span>
             <table class="table table-borderless">
-                <tr>
+                <tr id="namefield" style="display:none;">
                     <td><label asp-for="Name"></label></td>
                     <td><input type="text" asp-for="Name" class="form-control"></td>
                 </tr>
-                <tr>
+                <tr id="colorfield" style="display:none;">
                     <td><label asp-for="Color"></label></td>
                     <td><input type="color" asp-for="Color" class="form-control" value="#FFFFFF" id="colorpicker"></td>
                 </tr>
