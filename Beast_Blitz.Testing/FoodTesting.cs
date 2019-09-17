@@ -18,5 +18,19 @@ namespace Beast_Blitz.Testing
           //Then
           Assert.True(expected == actual);
         }
+
+        [Fact]
+        public void CanBeConstructedEmpty()
+        {
+          //Given
+          Food food = new Food();
+          
+          //When
+          int expected = 10;
+          int actual = food.FullnessAmt;
+          
+          //Then
+          Assert.True(expected == actual);
+        }
     }
 }
