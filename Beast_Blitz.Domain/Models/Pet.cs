@@ -13,7 +13,7 @@ namespace Beast_Blitz.Domain.Models
         [StringLength(50, ErrorMessage = "Name must be between 1 and 50 characters", MinimumLength = 1)]
         public string Name { get; set; }
 
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; protected set; }
         public CareStats CareStats { get; set; }
         
