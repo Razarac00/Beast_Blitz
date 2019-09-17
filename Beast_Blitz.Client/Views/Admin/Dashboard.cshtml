@@ -1,18 +1,29 @@
-<div class="row">
-    <div class="col-md-4">
-        <h3>Users</h3>
-        @Html.Partial("_AdminTablePartial")
-    </div>
-    <div class="col-md-4">
-        <h3>Monsters</h3>
-        @Html.Partial("_ElementTablePartial")
-        @Html.Partial("_SpeciesTableParial")
-        @Html.Partial("_EnemyTablePartial")
-    </div>
-    <div class="col-md-4">
-        <h3>World</h3>
-        @Html.Partial("_ItemTablePartial")
-        @Html.Partial("_ShopTablePartial")
-    </div>
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+@if(ViewData["Confirmation"] != null)
+{
+<div class="alert alert-success fade in alert-dismissible show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="align-top" style="font-size:20px">×</span>
+    </button>
+
+    @ViewData["Confirmation"]
+    
 </div>
+   
+}
+
+<h3>Users</h3>
+@Html.Partial("_AdminTablePartial")
+
+<h3>Monsters</h3>
+@Html.Partial("_ElementTablePartial")
+@Html.Partial("_SpeciesTablePartial")
+@Html.Partial("_EnemyTablePartial")
+
+<h3>Items</h3>
+@Html.Partial("_ArmorTablePartial")
+@Html.Partial("_ShopTablePartial")
 

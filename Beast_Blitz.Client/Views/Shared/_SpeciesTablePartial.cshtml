@@ -1,5 +1,5 @@
+<h5>Species</h5>
 <table class="table my-3">
-    <caption><h3>Species</h3></caption>
     <tr>
         <th>SpeciesID</th>
         <th>Image</th>
@@ -12,7 +12,7 @@
     {
     <tr>
         <td>@item.SpeciesID</td>
-        <td><img src="/img/monster/@item.Image" alt="@item.Name"></td>
+        <td><img src="/img/monster/@item.Image" alt="@item.Name" class="img-fluid"></td>
         <td>@item.Name</td>
         <td>@item.Element.Name</td>
         <td></td>
@@ -21,10 +21,13 @@
     }
     <tr>
         <td>1</td>
+        <td><img src="/img/monster/slime.gif" alt="item.Name" class="img-fluid"></td>
         <td>item.Name</td>
+        <td>elementName</td>
+        <td>base stats</td>
         <td><a type="btn btn-link" href="">Edit</a> <a type="btn btn-link" href="">Remove</a></td>
     </tr>
     <tr>
-        <td colspan="3"><a asp-action="AddNewElement" asp-controller="Admin" class="btn">Add New Element...</a></td>
+        <td colspan="6"><a asp-action="AddNewSpecies" asp-controller="Admin" class="btn btn-dark">Add New Species...</a></td>
     </tr>
 </table>

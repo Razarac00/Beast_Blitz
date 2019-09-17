@@ -36,23 +36,34 @@ namespace Beast_Blitz.Client.Controllers
         [HttpGet]
         public IActionResult AddNewSpecies()
         {
+            ViewBag.Elements = _db.Elements.ToList();
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddNewSpecies(Species species)
+        public async Task<IActionResult> AddNewSpecies(Species species, IFormFile file)
         {
-            if(ModelState.IsValid)
-            {
-                _db.Species.Add(species);
-                _db.SaveChanges();
-
-                ViewData["Confirmation"] = $"New species '{species.Name}' added successfully.";
-
-                return RedirectToAction("Dashboard");
+            if (file == null | file.Length == 0)  
+            { 
+                ViewBag.Error = "An item needs an image sprite!";
+                return View();
             }
 
-            return View();
+            var path = Path.Combine(  
+                Directory.GetCurrentDirectory(), "wwwroot/img/",   
+                file.FileName);
+                
+            using (var stream = new FileStream(path, FileMode.Create))  
+            {  
+                await file.CopyToAsync(stream);
+            }
+            
+            _db.Species.Add(species);
+            _db.SaveChanges();
+
+            ViewData["Confirmation"] = $"New species '{species.Name}' added successfully.";
+
+            return RedirectToAction("Dashboard");
         }
 
         [HttpGet]

@@ -213,3 +213,7 @@ svg {
   border: 4px solid rgba(90, 90, 90, 0.445);
   border-radius: 5px;
 }
+
+#admincontainer .table td:first-child {
+  text-align: left;
+}
