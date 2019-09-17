@@ -12,7 +12,7 @@ namespace Beast_Blitz.Domain.Models
 
         // Properties
         [NotMapped]
-        public List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
+        public List<Item> Inventory { get => buildInventory(); private set => inventory = resetInventory(value); }
         public List<ShopItem> ShopItems { get => shopItems; set => shopItems = value; }
 
         // Constructors
@@ -57,6 +57,25 @@ namespace Beast_Blitz.Domain.Models
             return value;
         }
         
+        public void AddToInventory(Item item)
+        {
+            var result = new ShopItem();
+            result.Item = item;
+            result.Shop = this;
+            result.LocationID = this.LocationID;
+            ShopItems.Add(result);
+        }
+
+        public bool RemoveFromInventory(Item item)
+        {
+            if (Inventory.Contains(item))
+            {
+                return 1 == ShopItems.RemoveAll(si => si.Item == item);
+            }
+
+            return false;
+        }
+
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
