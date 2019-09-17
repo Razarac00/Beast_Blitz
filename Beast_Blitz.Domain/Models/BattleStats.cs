@@ -150,5 +150,10 @@ namespace Beast_Blitz.Domain.Models
             return true;
           }
         }
+
+        public string StatList()
+        {
+          return $"Speed: {Speed} Attack: {Attack} Defense: {Defense} Health: {Health} Magic: {Magic}";
+        }
     }
 }

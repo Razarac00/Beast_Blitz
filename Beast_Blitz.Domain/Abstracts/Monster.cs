@@ -9,7 +9,7 @@ namespace Beast_Blitz.Domain.Abstracts
         public int MonsterID { get; set; }
 
         // Properties
-        [Required(ErrorMessage = "Species is required")]
+        // [Required(ErrorMessage = "Species is required")]
         public Species Species { get; set; }
         public BattleStats BattleStats { get; set; }
 

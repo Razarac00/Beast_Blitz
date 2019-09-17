@@ -8,10 +8,12 @@ namespace Beast_Blitz.Domain.Models
     {
         // Backing Field
         private List<Item> inventory = new List<Item>();
+        private List<ShopItem> shopItems = new List<ShopItem>();
+
         // Properties
         [NotMapped]
-        public List<Item> Inventory { get => buildInventory(); set => inventory = resetInventory(value); }
-        public List<ShopItem> ShopItems { get; set; }
+        public List<Item> Inventory { get => buildInventory(); private set => inventory = resetInventory(value); }
+        public List<ShopItem> ShopItems { get => shopItems; set => shopItems = value; }
 
         // Constructors
         public Shop(string name) : base(name)
@@ -55,13 +57,32 @@ namespace Beast_Blitz.Domain.Models
             return value;
         }
         
+        public void AddToInventory(Item item)
+        {
+            var result = new ShopItem();
+            result.Item = item;
+            result.Shop = this;
+            result.LocationID = this.LocationID;
+            ShopItems.Add(result);
+        }
+
+        public bool RemoveFromInventory(Item item)
+        {
+            if (Inventory.Contains(item))
+            {
+                return 1 == ShopItems.RemoveAll(si => si.Item == item);
+            }
+
+            return false;
+        }
+
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
           if (Inventory.Contains(item) && player.Coins >= item.BuyCost)
           {
             player.Coins = player.Coins - item.BuyCost;
-            player.Inventory.Add(item);
+            player.AddToInventory(item);
             return true;
           } else
           {
@@ -74,7 +95,7 @@ namespace Beast_Blitz.Domain.Models
         {
           if (player.Inventory.Contains(item))
           {
-            player.Inventory.Remove(item);
+            player.RemoveFromInventory(item);
             player.Coins = player.Coins + item.SellCost();
             return true;
           } else 
