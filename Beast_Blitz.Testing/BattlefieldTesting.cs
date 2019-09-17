@@ -36,7 +36,7 @@ namespace Beast_Blitz.Testing
           Battlefield bf = new Battlefield();
           
           //When
-          string expected = null;
+          string expected = "Battlefield";
           string actual = bf.Name;
           
           //Then
