@@ -16,7 +16,7 @@ namespace Beast_Blitz.Domain.Models
           Boss = boss; 
         }
 
-        public Battlefield()
+        public Battlefield() : base("Battlefield")
         {
         }
 
