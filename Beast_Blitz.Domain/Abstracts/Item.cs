@@ -23,7 +23,7 @@ namespace Beast_Blitz.Domain.Abstracts
         public int BuyCost { get; set; }
 
         [DataType(DataType.Text, ErrorMessage = "Image must be text")]
-        string Image { get; set; }
+        public string Image { get; set; }
 
         // Constants
         readonly double SELL_PENALTY = .25; 
