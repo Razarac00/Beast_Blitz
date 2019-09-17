@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Add a shop";
+}
+@model Beast_Blitz.Domain.Models.Shop
+
+<h3>Add New Shop</h3>
+<form asp-action="AddNewShop" asp-controller="Admin" method="post" enctype="multipart/form-data">
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" class="form-control">
+
+    <button class="btn btn-dark my-3" type="submit">Add Shop</button>
+</form>
