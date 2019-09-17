@@ -7,14 +7,16 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-$("#petcreator img").on("click", function(){
-  $("#petwindow image").attr("xlink:href", $(this).attr("src"));
-  $("#petwindow h5").html($(this).attr("species_name"));
-  $("#petwindow p").html($(this).attr("species_desc"));
-  $("#speciesname").attr("value", $(this).attr("species_name"));
-  $("#petwindow h6").html($(this).attr("species_stats"));
-});
+document.querySelectorAll("#petcreator img").forEach(item => {
+  item.addEventListener("click", event => {
+    document.querySelector("#petwindow image").setAttribute("xlink:href", item.getAttribute("src"));
+    document.querySelector("#petwindow h5").textContent = item.getAttribute("species_name");
+    document.querySelector("#petwindow p").textContent = item.getAttribute("species_desc");
+    document.querySelector("#speciesname").setAttribute("value", item.getAttribute("species_name"));
+    document.querySelector("#petwindow h6").textContent = item.getAttribute("species_stats");
+  })
+ });
 
-$(document).on("change", "input", function(){
-  $("#petwindow feFlood").attr("flood-color", document.getElementById("colorpicker").value);
-})
+document.getElementById("colorpicker").addEventListener("change", () => {
+  document.querySelector("#petwindow feFlood").setAttribute("flood-color", document.getElementById("colorpicker").value);
+});
