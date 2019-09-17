@@ -15,10 +15,6 @@ namespace Beast_Blitz.Domain.Models
 
         public Boss()
         {
-          Species = new Species();
-          Color = "defaultColor";
-          CoinReward = 10;
-          Reward = new Armor(); 
         }
     }
 }
