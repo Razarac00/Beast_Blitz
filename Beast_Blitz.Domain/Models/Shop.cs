@@ -57,6 +57,7 @@ namespace Beast_Blitz.Domain.Models
             return value;
         }
         
+        // public 
         // Return true if buy was successful
         public bool Buy(Player player, Item item)
         {
