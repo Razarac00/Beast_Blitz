@@ -44,8 +44,7 @@ namespace Beast_Blitz.Client.Controllers
         public async Task<IActionResult> AddNewSpecies(Species species, IFormFile imageSprite, int element)
         {
             if (imageSprite == null | imageSprite.Length == 0) 
-            { 
-                ViewBag.Error = "An item needs an image sprite!";
+            {
                 return View();
             }
 
