@@ -16,25 +16,32 @@ namespace Beast_Blitz.Client.Controllers
         Beast_Blitz_DbContext _db = new Beast_Blitz_DbContext();
         public IActionResult Profile()
         {
+            if(HttpContext.Session.GetInt32("UserId") == null)
+                return RedirectToAction("Register");
             return View();
         }
 
         public IActionResult Team()
         {
+            if(HttpContext.Session.GetInt32("UserId") == null)
+                return RedirectToAction("Register");
             return View();
         }
 
         public IActionResult Pet(int petId)
         {
-            //if User.Pets.Where(p => p.PetId == petId) == null
-            //return RedirectToAction("Team");
+            var thisPet = _db.Players.Single(u => u.UserID == HttpContext.Session.GetInt32("UserId")).Pets.FirstOrDefault(p => p.MonsterID == petId);
+            if(thisPet == null)
+                return RedirectToAction("Team");
             
             //fetch pet by pet id and pass to view
-            return View();
+            return View(thisPet);
         }
 
         public IActionResult Inventory()
         {
+            if(HttpContext.Session.GetInt32("UserId") == null)
+                return RedirectToAction("Register");
             return View();
         }
 
@@ -64,6 +71,10 @@ namespace Beast_Blitz.Client.Controllers
                 _db.SaveChanges();
 
                 var thisPlayer = _db.Players.Single(p => p.Username == newPlayer.Username);
+                var thisPet = _db.Pets.Last();
+
+                thisPlayer.AddNewPet(thisPet);
+                _db.SaveChanges();
 
                 HttpContext.Session.SetInt32("UserId", thisPlayer.UserID);
                 return RedirectToAction("Index", "Home");
