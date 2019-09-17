@@ -8,7 +8,7 @@ namespace Beast_Blitz.Domain.Models
         public string Stat { get; set; }
         public int Amt { get; set; }
 
-        // Constructor
+        // Constructors
         public Potion(string name, int basecost, string img, string stat, int amt) : base(name, basecost, img)
         {
           Stat = stat;
@@ -17,8 +17,6 @@ namespace Beast_Blitz.Domain.Models
 
         public Potion()
         {
-          Stat = "defaultStat";
-          Amt = 10;
         }
     }
 }
