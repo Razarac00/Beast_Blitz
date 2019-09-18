@@ -1,24 +1,24 @@
 <ul class="nav-main nav flex-column jumbotron">    
     <h5><i class="fas fa-home"></i> Team</h5>
     <li class="nav-item">
-        <a class="nav-link" asp-action="Profile" asp-controller="User">Team Profile</a>
+        <a class="nav-link" asp-action="Profile" asp-controller="User" asp-route-uid='@TempData["UserId"]'>Team Profile</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" asp-action="Team" asp-controller="User">Beast Care</a>
+        <a class="nav-link" asp-action="Team" asp-route-uid='@TempData["UserId"]' asp-controller="User" >Beast Care</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" asp-action="Inventory" asp-controller="User">Inventory</a>
+        <a class="nav-link" asp-action="Inventory" asp-route-uid='@TempData["UserId"]' asp-controller="User">Inventory</a>
     </li>
     <h5><i class="fas fa-globe"></i> World</h5>
     <ul>
-        <li><a class="nav-link" asp-action="Battle" asp-controller="World">Battle</a></li>
-        <li><a asp-action="Shops" asp-controller="World" class="nav-link">Shop</a></li>
+        <li><a class="nav-link" asp-action="Battle" asp-route-uid='@TempData["UserId"]' asp-controller="World">Battle</a></li>
+        <li><a asp-action="Shops" asp-route-uid='@TempData["UserId"]' asp-controller="World" class="nav-link">Shop</a></li>
     </ul>
     <h5><i class="fas fa-question-circle"></i> Help</h5>
     <li class="nav-item">
-        <a asp-action="Tutorial" asp-controller="Home" class="nav-link">Tutorial</a>
+        <a asp-action="Tutorial" asp-route-uid='@TempData["UserId"]' asp-controller="Home" class="nav-link">Tutorial</a>
     </li>
     <li>
-        <a asp-action="Faq" asp-controller="Home" class="nav-link">FAQ</a>
+        <a asp-action="Faq" asp-route-uid='@TempData["UserId"]' asp-controller="Home" class="nav-link">FAQ</a>
     </li>
 </ul>

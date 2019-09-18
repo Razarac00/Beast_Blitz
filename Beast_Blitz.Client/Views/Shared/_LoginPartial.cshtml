@@ -21,7 +21,7 @@ else{
         </tr>
         <tr>
             <td></td>
-            <td>Not a member? <a asp-controller="User" asp-action="Register">Register here!</a></td>
+            <td>Not a member? <a asp-controller="User" asp-action="Register" asp-route-uid='@TempData["UserId"]'>Register here!</a></td>
         </tr>
     </table>
 </form>

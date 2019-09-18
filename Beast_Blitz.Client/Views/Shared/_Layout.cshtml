@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <header>
-            <a asp-area="" asp-controller="Home" asp-action="Index"><h1 id="title">Beast Blitz</h1></a>
+            <a asp-area="" asp-controller="Home" asp-action="Index" asp-route-uid='@TempData["UserId"]'><h1 id="title">Beast Blitz</h1></a>
             <div class="align-right">
                 @Html.Partial("_LoginPartial")
             </div>

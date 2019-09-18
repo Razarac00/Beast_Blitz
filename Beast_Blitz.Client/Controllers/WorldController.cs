@@ -13,19 +13,21 @@ namespace Beast_Blitz.Client.Controllers
     public class WorldController : Controller
     {
         Beast_Blitz_DbContext _db = new Beast_Blitz_DbContext();
-        public IActionResult Shops()
+        public IActionResult Shops(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Index", "Home");
             ViewBag.UserLevel = 2;
+            TempData["UserId"] = uid;
             return View(_db.Shops.ToList());
         }
 
-        public IActionResult Shop(int shopId)
+        public IActionResult Shop(int shopId, int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Index", "Home");
             ViewBag.UserLevel = 2;
+            TempData["UserId"] = uid;
             // var thisShop = _db.Shops.FirstOrDefault(s => s.LocationID == shopId);
             
             // if(thisShop == null)
@@ -34,10 +36,11 @@ namespace Beast_Blitz.Client.Controllers
             return View();
         }
         
-        public IActionResult Battle()
+        public IActionResult Battle(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Index", "Home");
+            TempData["UserId"] = uid;
             ViewBag.UserLevel = 2;
             return View();
         }
