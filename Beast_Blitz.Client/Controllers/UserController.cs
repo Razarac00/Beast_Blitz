@@ -53,7 +53,7 @@ namespace Beast_Blitz.Client.Controllers
                 .Single(u => u.UserID == uid);
 
             TempData["UserId"] = uid;
-            
+
             var thisPet = thisUser.Pets
                 .Where(p => p.MonsterID == petId)
                 .FirstOrDefault();
@@ -110,6 +110,7 @@ namespace Beast_Blitz.Client.Controllers
                 _db.SaveChanges();
 
                 TempData["UserId"] = thisPlayer.UserID;
+                TempData.Keep();
                 return RedirectToAction("Index", "Home");
             }
 
@@ -123,6 +124,7 @@ namespace Beast_Blitz.Client.Controllers
             if(thisUser != null)
             {
                 TempData["UserId"] = thisUser.UserID;
+                TempData.Keep();
                 return RedirectToAction("Index", "Home");
             }
 
