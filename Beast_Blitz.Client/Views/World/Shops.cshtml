@@ -3,7 +3,7 @@
 <h2 class="my-3">World Shops</h2>
 
 <div class="shopcontainer">
-    <a asp-action="Shop" asp-controller="World" asp-route-shopId="1">
+    <a asp-action="Shop" asp-controller="World" asp-route-uid='@TempData["UserId"]' asp-route-shopId="1">
         <div class="shop my-3">
             <div class="row">
                 <div class="col-4">
@@ -17,7 +17,7 @@
         </div>
     </a>
 
-    <a asp-action="Shop" asp-controller="World" asp-route-shopId="1">        
+    <a asp-action="Shop" asp-controller="World" asp-route-uid='@TempData["UserId"]' asp-route-shopId="2">        
         <div class="shop my-3">
             <div class="row">
                 <div class="col-4">
@@ -31,7 +31,7 @@
         </div>
     </a>
 
-    <a asp-action="Shop" asp-controller="World" asp-route-shopId="1">    
+    <a asp-action="Shop" asp-controller="World" asp-route-uid='@TempData["UserId"]' asp-route-shopId="3">    
         <div class="shop my-3">
             <div class="row">
                 <div class="col-4">

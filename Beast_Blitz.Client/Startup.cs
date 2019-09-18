@@ -31,8 +31,6 @@ namespace Beast_Blitz.Client
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
-            services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -54,7 +52,6 @@ namespace Beast_Blitz.Client
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

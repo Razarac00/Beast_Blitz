@@ -15,61 +15,72 @@ namespace Beast_Blitz.Client.Controllers
     public class UserController : Controller
     {
         Beast_Blitz_DbContext _db = new Beast_Blitz_DbContext();
-        public IActionResult Profile()
+        public IActionResult Profile(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Register");
             ViewBag.UserLevel = 2;
 
             var thisUser = _db.Players
-                .Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
+                .Where(p => p.UserID == uid)
                 .Include(p => p.Pets)
                 .ThenInclude(pe => pe.Species)
                 .First();
+            TempData["UserId"] = uid;
             return View(thisUser);
         }
 
-        public IActionResult Team()
+        public IActionResult Team(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Register");
             ViewBag.UserLevel = 2;
 
-            var thisUser = _db.Players.Where(p => p.UserID == HttpContext.Session.GetInt32("UserId"))
+            var thisUser = _db.Players.Where(p => p.UserID == uid)
                 .Include(p => p.Pets)
                 .ThenInclude(pe => pe.Species)
                 .First();
+        
+            TempData["UserId"] = uid;
             return View(thisUser);
         }
 
-        public IActionResult Pet(int petId)
+        public IActionResult Pet(int petId, int uid)
         {
             var thisUser = _db.Players
                 .Include(u => u.Pets)
                 .ThenInclude(pe => pe.Species)
-                .Single(u => u.UserID == HttpContext.Session.GetInt32("UserId"));
+                .Single(u => u.UserID == uid);
+
+            TempData["UserId"] = uid;
+            
             var thisPet = thisUser.Pets
                 .Where(p => p.MonsterID == petId)
                 .FirstOrDefault();
             if(thisPet == null)
+            {
                 return RedirectToAction("Team");
+            }
             ViewBag.UserLevel = 2;
+
             return View(thisPet);
         }
 
-        public IActionResult Inventory()
+        public IActionResult Inventory(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") == null)
+            if(uid == 0)
                 return RedirectToAction("Register");
+            TempData["UserId"] = uid;
             ViewBag.UserLevel = 2;
             return View();
         }
 
         [HttpGet]
-        public IActionResult Register()
+        public IActionResult Register(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") != null)
+            if(uid != 0)
                 return RedirectToAction("Index", "Home");
+            TempData["UserId"] = uid;
             return View();
         }
 
@@ -98,7 +109,7 @@ namespace Beast_Blitz.Client.Controllers
                 thisPlayer.AddNewPet(thisPet);
                 _db.SaveChanges();
 
-                HttpContext.Session.SetInt32("UserId", thisPlayer.UserID);
+                TempData["UserId"] = thisPlayer.UserID;
                 return RedirectToAction("Index", "Home");
             }
 
@@ -111,7 +122,7 @@ namespace Beast_Blitz.Client.Controllers
             var thisUser = _db.Users.Where(u => u.Username == Username && u.Password == Password).FirstOrDefault();
             if(thisUser != null)
             {
-                HttpContext.Session.SetInt32("UserId", thisUser.UserID);
+                TempData["UserId"] = thisUser.UserID;
                 return RedirectToAction("Index", "Home");
             }
 
@@ -121,7 +132,6 @@ namespace Beast_Blitz.Client.Controllers
         [HttpPost]
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
         }
     }

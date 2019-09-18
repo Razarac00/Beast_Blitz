@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <header>
-            <a asp-area="" asp-controller="Home" asp-action="Index"><h1 id="title">Beast Blitz</h1></a>
+            <a asp-area="" asp-controller="Home" asp-route-uid='@TempData["UserId"]' asp-action="Index"><h1 id="title">Beast Blitz</h1></a>
             <div class="align-right">
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <footer class="border-top footer text-muted">
-            &copy; 2019 - Team 7 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - Team 7 - <a asp-area="" asp-route-uid='@TempData["UserId"]' asp-controller="Home" asp-action="Privacy">Privacy</a>
         </footer>
     </div>
 

@@ -11,36 +11,46 @@ namespace Beast_Blitz.Client.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") != null)
+            if(uid != 0 | TempData["UserId"] != null)
+            {
                 ViewBag.UserLevel = 2;
+                
+            }
+            if(TempData["UserId"] == null)
+            {
+                TempData["UserId"] = uid;
+            }
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") != null)
+            if(uid != 0)
                 ViewBag.UserLevel = 2;
+            TempData["UserId"] = uid;
             return View();
         }
 
-        public IActionResult Tutorial()
+        public IActionResult Tutorial(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") != null)
+            if(uid != 0)
                 ViewBag.UserLevel = 2;
+            TempData["UserId"] = uid;
             return View();
         }
 
-        public IActionResult Faq()
+        public IActionResult Faq(int uid)
         {
-            if(HttpContext.Session.GetInt32("UserId") != null)
+            if(uid != 0)
                 ViewBag.UserLevel = 2;
+            TempData["UserId"] = uid;
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int uid)
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
